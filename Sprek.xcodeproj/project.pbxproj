@@ -1,0 +1,539 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FB2B67BD1EF96AE2003620E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B67BC1EF96AE2003620E8 /* AppDelegate.swift */; };
+		FB2B67BF1EF96AE2003620E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B67BE1EF96AE2003620E8 /* ViewController.swift */; };
+		FB2B67C21EF96AE2003620E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2B67C01EF96AE2003620E8 /* Main.storyboard */; };
+		FB2B67C41EF96AE2003620E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB2B67C31EF96AE2003620E8 /* Assets.xcassets */; };
+		FB2B67C71EF96AE2003620E8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2B67C51EF96AE2003620E8 /* LaunchScreen.storyboard */; };
+		FB2B67D21EF96AE2003620E8 /* SprekTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B67D11EF96AE2003620E8 /* SprekTests.swift */; };
+		FB2B67DD1EF96AE2003620E8 /* SprekUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B67DC1EF96AE2003620E8 /* SprekUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FB2B67CE1EF96AE2003620E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB2B67B11EF96AE2003620E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB2B67B81EF96AE2003620E8;
+			remoteInfo = Sprek;
+		};
+		FB2B67D91EF96AE2003620E8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FB2B67B11EF96AE2003620E8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FB2B67B81EF96AE2003620E8;
+			remoteInfo = Sprek;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FB2B67B91EF96AE2003620E8 /* Sprek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sprek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2B67BC1EF96AE2003620E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FB2B67BE1EF96AE2003620E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FB2B67C11EF96AE2003620E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FB2B67C31EF96AE2003620E8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FB2B67C61EF96AE2003620E8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FB2B67C81EF96AE2003620E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB2B67CD1EF96AE2003620E8 /* SprekTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SprekTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2B67D11EF96AE2003620E8 /* SprekTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprekTests.swift; sourceTree = "<group>"; };
+		FB2B67D31EF96AE2003620E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FB2B67D81EF96AE2003620E8 /* SprekUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SprekUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FB2B67DC1EF96AE2003620E8 /* SprekUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SprekUITests.swift; sourceTree = "<group>"; };
+		FB2B67DE1EF96AE2003620E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB2B67B61EF96AE2003620E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2B67CA1EF96AE2003620E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2B67D51EF96AE2003620E8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FB2B67B01EF96AE2003620E8 = {
+			isa = PBXGroup;
+			children = (
+				FB2B67BB1EF96AE2003620E8 /* Sprek */,
+				FB2B67D01EF96AE2003620E8 /* SprekTests */,
+				FB2B67DB1EF96AE2003620E8 /* SprekUITests */,
+				FB2B67BA1EF96AE2003620E8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FB2B67BA1EF96AE2003620E8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FB2B67B91EF96AE2003620E8 /* Sprek.app */,
+				FB2B67CD1EF96AE2003620E8 /* SprekTests.xctest */,
+				FB2B67D81EF96AE2003620E8 /* SprekUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FB2B67BB1EF96AE2003620E8 /* Sprek */ = {
+			isa = PBXGroup;
+			children = (
+				FB2B67BC1EF96AE2003620E8 /* AppDelegate.swift */,
+				FB2B67BE1EF96AE2003620E8 /* ViewController.swift */,
+				FB2B67C01EF96AE2003620E8 /* Main.storyboard */,
+				FB2B67C31EF96AE2003620E8 /* Assets.xcassets */,
+				FB2B67C51EF96AE2003620E8 /* LaunchScreen.storyboard */,
+				FB2B67C81EF96AE2003620E8 /* Info.plist */,
+			);
+			path = Sprek;
+			sourceTree = "<group>";
+		};
+		FB2B67D01EF96AE2003620E8 /* SprekTests */ = {
+			isa = PBXGroup;
+			children = (
+				FB2B67D11EF96AE2003620E8 /* SprekTests.swift */,
+				FB2B67D31EF96AE2003620E8 /* Info.plist */,
+			);
+			path = SprekTests;
+			sourceTree = "<group>";
+		};
+		FB2B67DB1EF96AE2003620E8 /* SprekUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FB2B67DC1EF96AE2003620E8 /* SprekUITests.swift */,
+				FB2B67DE1EF96AE2003620E8 /* Info.plist */,
+			);
+			path = SprekUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FB2B67B81EF96AE2003620E8 /* Sprek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB2B67E11EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "Sprek" */;
+			buildPhases = (
+				FB2B67B51EF96AE2003620E8 /* Sources */,
+				FB2B67B61EF96AE2003620E8 /* Frameworks */,
+				FB2B67B71EF96AE2003620E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sprek;
+			productName = Sprek;
+			productReference = FB2B67B91EF96AE2003620E8 /* Sprek.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FB2B67CC1EF96AE2003620E8 /* SprekTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB2B67E41EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekTests" */;
+			buildPhases = (
+				FB2B67C91EF96AE2003620E8 /* Sources */,
+				FB2B67CA1EF96AE2003620E8 /* Frameworks */,
+				FB2B67CB1EF96AE2003620E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB2B67CF1EF96AE2003620E8 /* PBXTargetDependency */,
+			);
+			name = SprekTests;
+			productName = SprekTests;
+			productReference = FB2B67CD1EF96AE2003620E8 /* SprekTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FB2B67D71EF96AE2003620E8 /* SprekUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FB2B67E71EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekUITests" */;
+			buildPhases = (
+				FB2B67D41EF96AE2003620E8 /* Sources */,
+				FB2B67D51EF96AE2003620E8 /* Frameworks */,
+				FB2B67D61EF96AE2003620E8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FB2B67DA1EF96AE2003620E8 /* PBXTargetDependency */,
+			);
+			name = SprekUITests;
+			productName = SprekUITests;
+			productReference = FB2B67D81EF96AE2003620E8 /* SprekUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FB2B67B11EF96AE2003620E8 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = "Eli Yazdi";
+				TargetAttributes = {
+					FB2B67B81EF96AE2003620E8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3NBA9YL8AA;
+						ProvisioningStyle = Automatic;
+					};
+					FB2B67CC1EF96AE2003620E8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3NBA9YL8AA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB2B67B81EF96AE2003620E8;
+					};
+					FB2B67D71EF96AE2003620E8 = {
+						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 3NBA9YL8AA;
+						ProvisioningStyle = Automatic;
+						TestTargetID = FB2B67B81EF96AE2003620E8;
+					};
+				};
+			};
+			buildConfigurationList = FB2B67B41EF96AE2003620E8 /* Build configuration list for PBXProject "Sprek" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FB2B67B01EF96AE2003620E8;
+			productRefGroup = FB2B67BA1EF96AE2003620E8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FB2B67B81EF96AE2003620E8 /* Sprek */,
+				FB2B67CC1EF96AE2003620E8 /* SprekTests */,
+				FB2B67D71EF96AE2003620E8 /* SprekUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FB2B67B71EF96AE2003620E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2B67C71EF96AE2003620E8 /* LaunchScreen.storyboard in Resources */,
+				FB2B67C41EF96AE2003620E8 /* Assets.xcassets in Resources */,
+				FB2B67C21EF96AE2003620E8 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2B67CB1EF96AE2003620E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2B67D61EF96AE2003620E8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FB2B67B51EF96AE2003620E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2B67BF1EF96AE2003620E8 /* ViewController.swift in Sources */,
+				FB2B67BD1EF96AE2003620E8 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2B67C91EF96AE2003620E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2B67D21EF96AE2003620E8 /* SprekTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FB2B67D41EF96AE2003620E8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FB2B67DD1EF96AE2003620E8 /* SprekUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FB2B67CF1EF96AE2003620E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB2B67B81EF96AE2003620E8 /* Sprek */;
+			targetProxy = FB2B67CE1EF96AE2003620E8 /* PBXContainerItemProxy */;
+		};
+		FB2B67DA1EF96AE2003620E8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FB2B67B81EF96AE2003620E8 /* Sprek */;
+			targetProxy = FB2B67D91EF96AE2003620E8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		FB2B67C01EF96AE2003620E8 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB2B67C11EF96AE2003620E8 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FB2B67C51EF96AE2003620E8 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FB2B67C61EF96AE2003620E8 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FB2B67DF1EF96AE2003620E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FB2B67E01EF96AE2003620E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FB2B67E21EF96AE2003620E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				INFOPLIST_FILE = Sprek/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.Sprek;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		FB2B67E31EF96AE2003620E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				INFOPLIST_FILE = Sprek/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.Sprek;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		FB2B67E51EF96AE2003620E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				INFOPLIST_FILE = SprekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.SprekTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sprek.app/Sprek";
+			};
+			name = Debug;
+		};
+		FB2B67E61EF96AE2003620E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				INFOPLIST_FILE = SprekTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.SprekTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sprek.app/Sprek";
+			};
+			name = Release;
+		};
+		FB2B67E81EF96AE2003620E8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				INFOPLIST_FILE = SprekUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.SprekUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Sprek;
+			};
+			name = Debug;
+		};
+		FB2B67E91EF96AE2003620E8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				INFOPLIST_FILE = SprekUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.SprekUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Sprek;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FB2B67B41EF96AE2003620E8 /* Build configuration list for PBXProject "Sprek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2B67DF1EF96AE2003620E8 /* Debug */,
+				FB2B67E01EF96AE2003620E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FB2B67E11EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "Sprek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2B67E21EF96AE2003620E8 /* Debug */,
+				FB2B67E31EF96AE2003620E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB2B67E41EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2B67E51EF96AE2003620E8 /* Debug */,
+				FB2B67E61EF96AE2003620E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		FB2B67E71EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FB2B67E81EF96AE2003620E8 /* Debug */,
+				FB2B67E91EF96AE2003620E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FB2B67B11EF96AE2003620E8 /* Project object */;
+}
