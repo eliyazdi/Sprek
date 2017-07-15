@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FB1398EE1F128EC7003F3BEC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398EC1F128EC7003F3BEC /* Realm.framework */; };
+		FB1398EF1F128EC7003F3BEC /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398EC1F128EC7003F3BEC /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB1398F01F128EC7003F3BEC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398ED1F128EC7003F3BEC /* RealmSwift.framework */; };
+		FB1398F11F128EC7003F3BEC /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398ED1F128EC7003F3BEC /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		FB1398F71F12ACF5003F3BEC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398F51F12ACF5003F3BEC /* Fabric.framework */; };
+		FB1398F81F12ACF5003F3BEC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398F61F12ACF5003F3BEC /* Crashlytics.framework */; };
 		FB2B67BD1EF96AE2003620E8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B67BC1EF96AE2003620E8 /* AppDelegate.swift */; };
 		FB2B67BF1EF96AE2003620E8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB2B67BE1EF96AE2003620E8 /* ViewController.swift */; };
 		FB2B67C21EF96AE2003620E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB2B67C01EF96AE2003620E8 /* Main.storyboard */; };
@@ -33,7 +39,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		FB1398F21F128EC7003F3BEC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FB1398F11F128EC7003F3BEC /* RealmSwift.framework in Embed Frameworks */,
+				FB1398EF1F128EC7003F3BEC /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		FB1398EC1F128EC7003F3BEC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		FB1398ED1F128EC7003F3BEC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
+		FB1398F51F12ACF5003F3BEC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
+		FB1398F61F12ACF5003F3BEC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		FB2B67B91EF96AE2003620E8 /* Sprek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sprek.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB2B67BC1EF96AE2003620E8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FB2B67BE1EF96AE2003620E8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +79,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB1398F01F128EC7003F3BEC /* RealmSwift.framework in Frameworks */,
+				FB1398EE1F128EC7003F3BEC /* Realm.framework in Frameworks */,
+				FB1398F81F12ACF5003F3BEC /* Crashlytics.framework in Frameworks */,
+				FB1398F71F12ACF5003F3BEC /* Fabric.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +106,10 @@
 		FB2B67B01EF96AE2003620E8 = {
 			isa = PBXGroup;
 			children = (
+				FB1398F51F12ACF5003F3BEC /* Fabric.framework */,
+				FB1398F61F12ACF5003F3BEC /* Crashlytics.framework */,
+				FB1398EC1F128EC7003F3BEC /* Realm.framework */,
+				FB1398ED1F128EC7003F3BEC /* RealmSwift.framework */,
 				FB2B67BB1EF96AE2003620E8 /* Sprek */,
 				FB2B67D01EF96AE2003620E8 /* SprekTests */,
 				FB2B67DB1EF96AE2003620E8 /* SprekUITests */,
@@ -135,6 +168,9 @@
 				FB2B67B51EF96AE2003620E8 /* Sources */,
 				FB2B67B61EF96AE2003620E8 /* Frameworks */,
 				FB2B67B71EF96AE2003620E8 /* Resources */,
+				FB1398F21F128EC7003F3BEC /* Embed Frameworks */,
+				FB1398F31F128F0A003F3BEC /* ShellScript */,
+				FB1398F41F12ACD6003F3BEC /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -193,7 +229,7 @@
 				TargetAttributes = {
 					FB2B67B81EF96AE2003620E8 = {
 						CreatedOnToolsVersion = 8.3.3;
-						DevelopmentTeam = 3NBA9YL8AA;
+						DevelopmentTeam = A2KUJPLV68;
 						ProvisioningStyle = Automatic;
 					};
 					FB2B67CC1EF96AE2003620E8 = {
@@ -256,6 +292,35 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		FB1398F31F128F0A003F3BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+		};
+		FB1398F41F12ACD6003F3BEC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "./Fabric.framework/run a9fb732521ddd35550ed2801544bf03445b4e008 ac723569602f29fe555197e3082fddef716c4c1938eccd4dda62cb84eb266dd1";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FB2B67B51EF96AE2003620E8 /* Sources */ = {
@@ -417,7 +482,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				DEVELOPMENT_TEAM = A2KUJPLV68;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sprek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.Sprek;
@@ -430,7 +499,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3NBA9YL8AA;
+				DEVELOPMENT_TEAM = A2KUJPLV68;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = Sprek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.Sprek;
@@ -516,6 +589,7 @@
 				FB2B67E31EF96AE2003620E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB2B67E41EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekTests" */ = {
 			isa = XCConfigurationList;
@@ -524,6 +598,7 @@
 				FB2B67E61EF96AE2003620E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		FB2B67E71EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekUITests" */ = {
 			isa = XCConfigurationList;
@@ -532,6 +607,7 @@
 				FB2B67E91EF96AE2003620E8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
