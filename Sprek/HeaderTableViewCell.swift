@@ -18,13 +18,12 @@ class HeaderTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
         plusButton.tintColor = Colors().primary
-        plusButton.addTarget(self, action: #selector(self.goToNewCardView), for: .touchUpInside)
+//        plusButton.addTarget(self, action: #selector(self.goToNewCardView), for: .touchUpInside)
 //        goToNewCardView()
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        goToNewCardView()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

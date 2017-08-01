@@ -17,6 +17,16 @@ class Unit: Object {
 //    return []
 //  }
     dynamic var name = ""
-    let strength = RealmOptional<Int>()
     dynamic var course: Course?
+    func delete(){
+        let realm = try! Realm()
+        let cards = realm.objects(Card.self).filter("unit == %@", self)
+        try! realm.write{
+            realm.delete(cards)
+            realm.delete(self)
+        }
+    }
+    func getStrength(){
+        
+    }
 }

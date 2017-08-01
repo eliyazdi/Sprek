@@ -20,5 +20,18 @@ class Course: Object {
     dynamic var lang = ""
     dynamic var noSpaces = false
     dynamic var backwards = false
+    func delete(){
+        let realm = try! Realm()
+        let units = realm.objects(Unit.self).filter("course == %@", self)
+        for unit in units{
+            unit.delete()
+        }
+        try! realm.write {
+            realm.delete(self)
+        }
+    }
+    func getStrength(){
+        
+    }
     
 }

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class CardTableViewCell: UITableViewCell {
 
+    var audioPlayer: AVAudioPlayer!
     var card = Card()
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -20,6 +22,14 @@ class CardTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func playAudio(){
+        if self.card.audio != nil{
+            audioPlayer = try! AVAudioPlayer(data: self.card.audio!)
+            audioPlayer.prepareToPlay()
+            audioPlayer.play()
+        }
     }
 
 }

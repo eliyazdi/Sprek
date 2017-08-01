@@ -348,6 +348,9 @@
 		FBA1A6851F2BC0E40007A636 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A6841F2BC0E40007A636 /* Card.swift */; };
 		FBA1A68F1F2BD2BD0007A636 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA1A68E1F2BD2BD0007A636 /* Media.xcassets */; };
 		FBA1A6911F2BD5040007A636 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A6901F2BD5040007A636 /* TabController.swift */; };
+		FBA744831F30DE84009D4A4E /* HideableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744821F30DE84009D4A4E /* HideableUIView.swift */; };
+		FBA744851F30EF12009D4A4E /* Strength.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744841F30EF12009D4A4E /* Strength.swift */; };
+		FBA744871F30F443009D4A4E /* levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744861F30F443009D4A4E /* levenshtein.swift */; };
 		FBADFBF51F1FC78F0036B5A0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADFBF41F1FC78F0036B5A0 /* Colors.swift */; };
 		FBADFBF71F1FDA3A0036B5A0 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADFBF61F1FDA3A0036B5A0 /* CourseTableViewCell.swift */; };
 		FBB9C02B1F2EA158009A7CB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB9C02A1F2EA158009A7CB5 /* CardTableViewCell.swift */; };
@@ -355,7 +358,6 @@
 		FBC2E3DA1F2E296E00A2CB18 /* VocabExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3D91F2E296E00A2CB18 /* VocabExerciseViewController.swift */; };
 		FBC2E3DC1F2E2E0B00A2CB18 /* SessionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3DB1F2E2E0B00A2CB18 /* SessionViewController.swift */; };
 		FBC2E3DE1F2E36AF00A2CB18 /* UnitTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3DD1F2E36AF00A2CB18 /* UnitTableViewController.swift */; };
-		FBC2E3E01F2E864100A2CB18 /* VocabTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3DF1F2E864100A2CB18 /* VocabTableViewCell.swift */; };
 		FBC2E3E21F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3E11F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift */; };
 		FBC2E3E41F2E865700A2CB18 /* SentenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3E31F2E865700A2CB18 /* SentenceTableViewCell.swift */; };
 		FBC2E3E61F2E893500A2CB18 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3E51F2E893500A2CB18 /* HeaderTableViewCell.swift */; };
@@ -742,6 +744,9 @@
 		FBA1A6841F2BC0E40007A636 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FBA1A68E1F2BD2BD0007A636 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		FBA1A6901F2BD5040007A636 /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		FBA744821F30DE84009D4A4E /* HideableUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideableUIView.swift; sourceTree = "<group>"; };
+		FBA744841F30EF12009D4A4E /* Strength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strength.swift; sourceTree = "<group>"; };
+		FBA744861F30F443009D4A4E /* levenshtein.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = levenshtein.swift; sourceTree = "<group>"; };
 		FBADFBF41F1FC78F0036B5A0 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FBADFBF61F1FDA3A0036B5A0 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
 		FBB9C02A1F2EA158009A7CB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
@@ -749,7 +754,6 @@
 		FBC2E3D91F2E296E00A2CB18 /* VocabExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabExerciseViewController.swift; sourceTree = "<group>"; };
 		FBC2E3DB1F2E2E0B00A2CB18 /* SessionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionViewController.swift; sourceTree = "<group>"; };
 		FBC2E3DD1F2E36AF00A2CB18 /* UnitTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTableViewController.swift; sourceTree = "<group>"; };
-		FBC2E3DF1F2E864100A2CB18 /* VocabTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabTableViewCell.swift; sourceTree = "<group>"; };
 		FBC2E3E11F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabWithLatinTableViewCell.swift; sourceTree = "<group>"; };
 		FBC2E3E31F2E865700A2CB18 /* SentenceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceTableViewCell.swift; sourceTree = "<group>"; };
 		FBC2E3E51F2E893500A2CB18 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
@@ -814,6 +818,9 @@
 		FB2B67BB1EF96AE2003620E8 /* Sprek */ = {
 			isa = PBXGroup;
 			children = (
+				FBA744861F30F443009D4A4E /* levenshtein.swift */,
+				FBA744821F30DE84009D4A4E /* HideableUIView.swift */,
+				FBA744841F30EF12009D4A4E /* Strength.swift */,
 				FBC2E3D61F2E294B00A2CB18 /* Session */,
 				FBA1A6811F2B9B470007A636 /* Realm Models */,
 				FBA1A67A1F2B9A9C0007A636 /* Course View */,
@@ -1192,7 +1199,6 @@
 				FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */,
 				FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */,
 				FBC2E3DD1F2E36AF00A2CB18 /* UnitTableViewController.swift */,
-				FBC2E3DF1F2E864100A2CB18 /* VocabTableViewCell.swift */,
 				FBC2E3E11F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift */,
 				FBC2E3E31F2E865700A2CB18 /* SentenceTableViewCell.swift */,
 				FBC2E3E51F2E893500A2CB18 /* HeaderTableViewCell.swift */,
@@ -1741,6 +1747,7 @@
 				FBFDED2B1F229EED00DD1E3D /* LangCell.swift in Sources */,
 				FBC2E3DE1F2E36AF00A2CB18 /* UnitTableViewController.swift in Sources */,
 				FBC2E3D81F2E296200A2CB18 /* TranslationExerciseViewController.swift in Sources */,
+				FBA744871F30F443009D4A4E /* levenshtein.swift in Sources */,
 				FB27FB561F2A795E0043EB07 /* MyCoursesTableViewController.swift in Sources */,
 				FBC2E3E21F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift in Sources */,
 				FBADFBF71F1FDA3A0036B5A0 /* CourseTableViewCell.swift in Sources */,
@@ -1750,14 +1757,15 @@
 				FBA1A6801F2B9B360007A636 /* UnitsTableViewController.swift in Sources */,
 				FBA1A6911F2BD5040007A636 /* TabController.swift in Sources */,
 				FBADFBF51F1FC78F0036B5A0 /* Colors.swift in Sources */,
-				FBC2E3E01F2E864100A2CB18 /* VocabTableViewCell.swift in Sources */,
 				FB39CD671F1FF2020074D115 /* NewCourseViewController.swift in Sources */,
 				FBC2E3E61F2E893500A2CB18 /* HeaderTableViewCell.swift in Sources */,
+				FBA744851F30EF12009D4A4E /* Strength.swift in Sources */,
 				FBFF4BC21F2F8CEC00A4F52D /* NewCardViewController.swift in Sources */,
 				FBC2E3DA1F2E296E00A2CB18 /* VocabExerciseViewController.swift in Sources */,
 				FBB9C02B1F2EA158009A7CB5 /* CardTableViewCell.swift in Sources */,
 				FBC2E3DC1F2E2E0B00A2CB18 /* SessionViewController.swift in Sources */,
 				FB2B67BD1EF96AE2003620E8 /* AppDelegate.swift in Sources */,
+				FBA744831F30DE84009D4A4E /* HideableUIView.swift in Sources */,
 				FBA1A6851F2BC0E40007A636 /* Card.swift in Sources */,
 				FB35D6721F203164006BA76E /* Langs.swift in Sources */,
 			);

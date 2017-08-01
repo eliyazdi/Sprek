@@ -12,9 +12,17 @@ class SessionViewController: UIViewController {
 
     @IBOutlet weak var sessionProgress: UIProgressView!
     @IBOutlet weak var answerLabel: UILabel!
+    @IBOutlet weak var containerView: UIView!
+    
+    var unit: Unit?
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let translationView = self.storyboard?.instantiateViewController(withIdentifier: "translationView")
+        self.addChildViewController(translationView!)
+        translationView?.view.frame = containerView.bounds
+        containerView.addSubview((translationView?.view)!)
+        
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.barTintColor = UIColor.white
         self.navigationController?.navigationBar.tintColor = Colors().primary
@@ -23,7 +31,6 @@ class SessionViewController: UIViewController {
         self.sessionProgress.clipsToBounds = true
         self.sessionProgress.progressTintColor = Colors().dark
         self.sessionProgress.layer.cornerRadius = 2
-        showAnswer(type: .correct)
     }
 
     override func didReceiveMemoryWarning() {

@@ -21,8 +21,11 @@ class SentenceTableViewCell: CardTableViewCell {
     override func layoutSubviews() {
         super.layoutSubviews()
         targetSentenceLabel.text = self.card.sentence
+        strengthLabel.text = Strength(emojiFrom: self.card.strength).emoji
         if(self.card.audio == nil){
             self.playButton.isHidden = true
+        }else{
+            self.playButton.addTarget(self, action: #selector(playAudio), for: .touchUpInside)
         }
     }
 

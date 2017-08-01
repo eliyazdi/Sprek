@@ -25,6 +25,22 @@ class VocabWithLatinTableViewCell: CardTableViewCell {
         targetWordLabel.text = self.card.sentence
         translationWordLabel.text = self.card.translation
         latinLabel.text = self.card.latin
+        strengthLabel.text = Strength(emojiFrom: self.card.strength).emoji
+        if(self.card.audio == nil){
+//            self.playButton.isHidden = true
+            self.playButton.hideView()
+            let noAudioConstraint = NSLayoutConstraint(
+                item: targetWordLabel,
+                attribute: .left,
+                relatedBy: .equal,
+                toItem: self,
+                attribute: .left,
+                multiplier: 1,
+                constant: 25)
+            self.addConstraint(noAudioConstraint)
+        }else{
+            self.playButton.addTarget(self, action: #selector(playAudio), for: .touchUpInside)
+        }
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {

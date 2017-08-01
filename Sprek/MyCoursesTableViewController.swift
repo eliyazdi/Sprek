@@ -76,10 +76,11 @@ class MyCoursesTableViewController: UITableViewController {
                 self.dismiss(animated: true, completion: nil)
             }))
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
-                let realm = try! Realm()
-                try! realm.write {
-                    realm.delete((self.courses?[indexPath.row])!)
-                }
+//                let realm = try! Realm()
+//                try! realm.write {
+//                    realm.delete((self.courses?[indexPath.row])!)
+//                }
+                (self.courses?[indexPath.row])!.delete()
                 self.dismiss(animated: true, completion: nil)
                 self.tableView.deleteRows(at: [indexPath], with: .left)
             }))
@@ -130,18 +131,20 @@ class MyCoursesTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "toUnitsView" {
-            if let indexPath = tableView.indexPathForSelectedRow {
-                let candy = courses?[indexPath.row]
-                let controller = segue.destination as! UnitsTableViewController
-                controller.course = candy
-                controller.navigationItem.title = candy!.name
-                controller.navigationItem.leftItemsSupplementBackButton = true
+        if let cell = sender as? UITableViewCell{
+            if segue.identifier == "toUnitsView" {
+                if let indexPath = tableView.indexPath(for: cell) {
+                    let candy = courses?[indexPath.row]
+                    let controller = segue.destination as! UnitsTableViewController
+                    controller.course = candy
+                    controller.navigationItem.title = candy!.name
+                    controller.navigationItem.leftItemsSupplementBackButton = true
+                }
             }
         }
     }
