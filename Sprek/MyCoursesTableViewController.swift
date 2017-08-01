@@ -17,6 +17,18 @@ class MyCoursesTableViewController: UITableViewController {
         super.viewDidLoad()
         let realm = try! Realm()
         courses = realm.objects(Course.self)
+        var shortcutItems: [UIApplicationShortcutItem] = []
+        for course in (courses?.prefix(3))!{
+            let icon = UIApplicationShortcutIcon(type: .favorite)
+            let shortcutItem = UIApplicationShortcutItem(type: "openCourse", localizedTitle: course.name, localizedSubtitle: "Strength: 👍", icon: icon)
+            shortcutItems.append(shortcutItem)
+        }
+        let addIcon = UIApplicationShortcutIcon(type: .add)
+        let item = UIApplicationShortcutItem(type: "newCourse", localizedTitle: "New Course", localizedSubtitle: "", icon: addIcon)
+        shortcutItems.append(item)
+        UIApplication.shared.shortcutItems = shortcutItems
+        
+        
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = Colors().primary
