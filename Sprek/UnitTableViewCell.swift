@@ -11,6 +11,7 @@ import UIKit
 class UnitTableViewCell: UITableViewCell {
 
     @IBOutlet weak var unitNameLabel: UILabel!
+    @IBOutlet weak var strengthLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

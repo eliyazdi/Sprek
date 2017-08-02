@@ -15,8 +15,6 @@ class NewCourseViewController: UIViewController {
     @IBOutlet weak var langLabel: UILabel!
     
     @IBOutlet weak var courseNameField: UITextField!
-    @IBOutlet weak var noSpacesSwitch: UISwitch!
-    @IBOutlet weak var rightLeftSwitch: UISwitch!
     
     var lang: String = ""
     
@@ -41,8 +39,6 @@ class NewCourseViewController: UIViewController {
         let myCourse = Course()
         myCourse.name = courseNameField.text!
         myCourse.lang = self.lang
-        myCourse.backwards = rightLeftSwitch.isOn
-        myCourse.noSpaces = noSpacesSwitch.isOn
         
         let realm = try! Realm()
         

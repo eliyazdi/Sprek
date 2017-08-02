@@ -342,6 +342,7 @@
 		FB39CFE01F1FF3400074D115 /* ZW.png in Resources */ = {isa = PBXBuildFile; fileRef = FB39CEA41F1FF33F0074D115 /* ZW.png */; };
 		FB5F031F1F21783B00EAC3BA /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F031E1F21783B00EAC3BA /* Course.swift */; };
 		FB5F03211F22674C00EAC3BA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5F03201F22674C00EAC3BA /* Icons.xcassets */; };
+		FB96BC601F3228D7008860B8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */; };
 		FBA1A67E1F2B9B0B0007A636 /* UnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */; };
 		FBA1A6801F2B9B360007A636 /* UnitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */; };
 		FBA1A6831F2B9B590007A636 /* Unit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A6821F2B9B590007A636 /* Unit.swift */; };
@@ -738,6 +739,7 @@
 		FB39CEA41F1FF33F0074D115 /* ZW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZW.png; sourceTree = "<group>"; };
 		FB5F031E1F21783B00EAC3BA /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		FB5F03201F22674C00EAC3BA /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTableViewCell.swift; sourceTree = "<group>"; };
 		FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsTableViewController.swift; sourceTree = "<group>"; };
 		FBA1A6821F2B9B590007A636 /* Unit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Unit.swift; sourceTree = "<group>"; };
@@ -1193,17 +1195,25 @@
 			path = flags;
 			sourceTree = "<group>";
 		};
+		FB96BC5C1F3119F4008860B8 /* Cards */ = {
+			isa = PBXGroup;
+			children = (
+				FBC2E3E11F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift */,
+				FBC2E3E31F2E865700A2CB18 /* SentenceTableViewCell.swift */,
+				FBC2E3E51F2E893500A2CB18 /* HeaderTableViewCell.swift */,
+				FBB9C02A1F2EA158009A7CB5 /* CardTableViewCell.swift */,
+				FBFF4BC11F2F8CEC00A4F52D /* NewCardViewController.swift */,
+			);
+			name = Cards;
+			sourceTree = "<group>";
+		};
 		FBA1A67A1F2B9A9C0007A636 /* Course View */ = {
 			isa = PBXGroup;
 			children = (
 				FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */,
 				FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */,
 				FBC2E3DD1F2E36AF00A2CB18 /* UnitTableViewController.swift */,
-				FBC2E3E11F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift */,
-				FBC2E3E31F2E865700A2CB18 /* SentenceTableViewCell.swift */,
-				FBC2E3E51F2E893500A2CB18 /* HeaderTableViewCell.swift */,
-				FBB9C02A1F2EA158009A7CB5 /* CardTableViewCell.swift */,
-				FBFF4BC11F2F8CEC00A4F52D /* NewCardViewController.swift */,
+				FB96BC5C1F3119F4008860B8 /* Cards */,
 			);
 			name = "Course View";
 			sourceTree = "<group>";
@@ -1224,6 +1234,7 @@
 				FBC2E3D71F2E296200A2CB18 /* TranslationExerciseViewController.swift */,
 				FBC2E3D91F2E296E00A2CB18 /* VocabExerciseViewController.swift */,
 				FBC2E3DB1F2E2E0B00A2CB18 /* SessionViewController.swift */,
+				FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */,
 			);
 			name = Session;
 			sourceTree = "<group>";
@@ -1251,7 +1262,6 @@
 				FB1398F21F128EC7003F3BEC /* Embed Frameworks */,
 				FB1398F31F128F0A003F3BEC /* ShellScript */,
 				FB1398F41F12ACD6003F3BEC /* ShellScript */,
-				FB5F03221F2268FE00EAC3BA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -1721,20 +1731,6 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run a9fb732521ddd35550ed2801544bf03445b4e008 ac723569602f29fe555197e3082fddef716c4c1938eccd4dda62cb84eb266dd1";
 		};
-		FB5F03221F2268FE00EAC3BA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Icons.xcassets",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "embed-alternate-icons";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -1767,6 +1763,7 @@
 				FB2B67BD1EF96AE2003620E8 /* AppDelegate.swift in Sources */,
 				FBA744831F30DE84009D4A4E /* HideableUIView.swift in Sources */,
 				FBA1A6851F2BC0E40007A636 /* Card.swift in Sources */,
+				FB96BC601F3228D7008860B8 /* ExerciseViewController.swift in Sources */,
 				FB35D6721F203164006BA76E /* Langs.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

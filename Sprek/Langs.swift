@@ -9,14 +9,20 @@
 import Foundation
 
 struct Lang{
+    /// Two-character identifier for language
     var key: String
+    /// English name of language
     var name: String
+    /// Country ID for country commonly associated with language
     var flag: String
+    /// Native name of language
     var nativeName: String
 }
 
 class Langs{
+    /// Dictionary of all languages in langs.json
     var dict: [String: Any]
+    /// Array of all languages in langs.json
     var arr = [Lang]()
     init(){
         do {

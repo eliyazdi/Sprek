@@ -18,8 +18,6 @@ class Course: Object {
 //  }
     dynamic var name = ""
     dynamic var lang = ""
-    dynamic var noSpaces = false
-    dynamic var backwards = false
     func delete(){
         let realm = try! Realm()
         let units = realm.objects(Unit.self).filter("course == %@", self)
@@ -30,8 +28,16 @@ class Course: Object {
             realm.delete(self)
         }
     }
-    func getStrength(){
-        
+    
+    /// Returns the average strength of all units in a course
+    func getStrength() -> Int{
+        let realm = try! Realm()
+        let units = realm.objects(Unit.self).filter("course == %@", self)
+        var strengths: [Int] = []
+        for unit in units{
+            strengths.append(unit.getStrength())
+        }
+        return strengths.roundAverage
     }
     
 }

@@ -7,21 +7,27 @@
 //
 
 import UIKit
+import RealmSwift
 
-class SessionViewController: UIViewController {
+class SessionViewController: UIViewController, ExerciseDelegate {
 
     @IBOutlet weak var sessionProgress: UIProgressView!
     @IBOutlet weak var answerLabel: UILabel!
     @IBOutlet weak var containerView: UIView!
     
     var unit: Unit?
+    var course: Course?
+    var cards: Results<Card>?
+    var cardsCompleted: Int = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let translationView = self.storyboard?.instantiateViewController(withIdentifier: "translationView")
-        self.addChildViewController(translationView!)
-        translationView?.view.frame = containerView.bounds
-        containerView.addSubview((translationView?.view)!)
+        let translationView = self.storyboard?.instantiateViewController(withIdentifier: "translationView") as! TranslationExerciseViewController
+        self.addChildViewController(translationView)
+        translationView.view.frame = containerView.bounds
+        translationView.delegate = self
+        containerView.addSubview((translationView.view)!)
         
         // Do any additional setup after loading the view.
         self.navigationController?.navigationBar.barTintColor = UIColor.white
@@ -31,11 +37,19 @@ class SessionViewController: UIViewController {
         self.sessionProgress.clipsToBounds = true
         self.sessionProgress.progressTintColor = Colors().dark
         self.sessionProgress.layer.cornerRadius = 2
+        
+        loadCards()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func loadCards(){
+        let realm = try! Realm()
+        self.cards = realm.objects(Card.self)
+            .filter("nextPractice <= %@ AND unit == %@", Date(), self.unit!)
     }
     
     func popBack(){
@@ -52,6 +66,10 @@ class SessionViewController: UIViewController {
             self.navigationController?.popViewController(animated: true)
         }))
         self.present(alert, animated: true)
+    }
+    
+    func answeredCorrectly(_ correct: Bool) {
+        
     }
     
     enum AnswerType{
@@ -92,7 +110,12 @@ class SessionViewController: UIViewController {
 
 }
 
+protocol ExerciseDelegate: class{
+    func answeredCorrectly(_ correct: Bool)
+}
+
 extension Array {
+    /// Get random item from array
     func randomItem() -> Element {
         let index = Int(arc4random_uniform(UInt32(self.count)))
         return self[index]

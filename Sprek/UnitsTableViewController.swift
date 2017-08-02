@@ -1,48 +1,29 @@
 //
-//  MyCoursesTableViewController.swift
+//  UnitsTableViewController.swift
 //  Sprek
 //
-//  Created by Eli Yazdi on 7/27/17.
+//  Created by Eli Yazdi on 7/28/17.
 //  Copyright © 2017 Eli Yazdi. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class MyCoursesTableViewController: UITableViewController {
+class UnitsTableViewController: UITableViewController {
     
-    var courses: Results<Course>?
+    var course: Course?
+    var units: Results<Unit>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
         let realm = try! Realm()
-        courses = realm.objects(Course.self)
-        var shortcutItems: [UIApplicationShortcutItem] = []
-        for course in (courses?.prefix(3))!{
-            let icon = UIApplicationShortcutIcon(type: .favorite)
-            let shortcutItem = UIApplicationShortcutItem(type: "openCourse", localizedTitle: course.name, localizedSubtitle: "Strength: 👍", icon: icon)
-            shortcutItems.append(shortcutItem)
-        }
-        let addIcon = UIApplicationShortcutIcon(type: .add)
-        let item = UIApplicationShortcutItem(type: "newCourse", localizedTitle: "New Course", localizedSubtitle: "", icon: addIcon)
-        shortcutItems.append(item)
-        UIApplication.shared.shortcutItems = shortcutItems
-        
-        
-        
-        self.navigationController?.navigationBar.isTranslucent = false
-        self.navigationController?.navigationBar.barTintColor = Colors().primary
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(openNewCourseView))
-        
-        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        units = realm.objects(Unit.self).filter("course == %@", course!)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(newUnit))
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,28 +40,8 @@ class MyCoursesTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return courses!.count
+        return (units?.count)!
     }
-
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "courseCell", for: indexPath) as! CourseTableViewCell
-
-        // Configure the cell...
-        let course = courses![indexPath.row]
-        let lang = Langs().arr.filter { $0.key == course.lang }
-        cell.FlagImage.image = UIImage(named: "\(lang[0].flag).png")
-        cell.TitleLabel.text = course.name
-        let strength = Strength(emojiFrom: course.getStrength()).emoji
-        cell.StrengthLabel.text = "Strength: \(strength!)"
-
-        return cell
-    }
-    
-    func openNewCourseView(){
-        self.performSegue(withIdentifier: "goToSelectLang", sender: self)
-    }
- 
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
@@ -89,23 +50,72 @@ class MyCoursesTableViewController: UITableViewController {
                 self.dismiss(animated: true, completion: nil)
             }))
             alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
-//                let realm = try! Realm()
-//                try! realm.write {
-//                    realm.delete((self.courses?[indexPath.row])!)
-//                }
-                (self.courses?[indexPath.row])!.delete()
+                (self.units?[indexPath.row])!.delete()
                 self.dismiss(animated: true, completion: nil)
                 self.tableView.deleteRows(at: [indexPath], with: .left)
             }))
             self.present(alert, animated: true)
         }
         deleteAction.backgroundColor = UIColor.red
-        let editAction = UITableViewRowAction(style: .normal, title: "Edit"){ (rowAction, indexPath) in
-            print("Edited")
+        let editAction = UITableViewRowAction(style: .normal, title: "Rename"){ (rowAction, indexPath) in
+            let alert = UIAlertController(title: "Rename Unit", message: "", preferredStyle: .alert)
+            alert.addTextField { (textField) in
+                textField.text = self.units?[indexPath.row].name
+                textField.autocapitalizationType = .words
+            }
+            alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            alert.addAction(UIAlertAction(title: "Rename", style: .default, handler: { [weak alert] (_) in
+                let textField = alert?.textFields![0]
+                let realm = try! Realm()
+                try! realm.write {
+                    self.units?[indexPath.row].name = (textField?.text)!
+                }
+                self.tableView.reloadData()
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
         editAction.backgroundColor = Colors().dark
         return [deleteAction, editAction]
     }
+    
+    func newUnit(){
+        let alert = UIAlertController(title: "New Unit", message: "Create a new unit", preferredStyle: .alert)
+        alert.addTextField { (textField) in
+            textField.placeholder = "Unit name"
+            textField.autocapitalizationType = .words
+        }
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
+            self.dismiss(animated: true, completion: nil)
+        }))
+        alert.addAction(UIAlertAction(title: "Add", style: .default, handler: { [weak alert] (_) in
+            let textField = alert?.textFields![0]
+            let newUnit = Unit()
+            newUnit.name = (textField?.text)!
+            newUnit.course = self.course
+            let realm = try! Realm()
+            try! realm.write {
+                realm.add(newUnit)
+            }
+            self.tableView.reloadData()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "unitCell", for: indexPath) as! UnitTableViewCell
+
+        // Configure the cell...
+        let unit = units![indexPath.row]
+        cell.unitNameLabel.text = unit.name
+        let strength = Strength(emojiFrom: unit.getStrength()).emoji
+        cell.strengthLabel.text = strength!
+        
+        return cell
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -144,23 +154,22 @@ class MyCoursesTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-    
+
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if let cell = sender as? UITableViewCell{
-            if segue.identifier == "toUnitsView" {
-                if let indexPath = tableView.indexPath(for: cell) {
-                    let candy = courses?[indexPath.row]
-                    let controller = segue.destination as! UnitsTableViewController
-                    controller.course = candy
-                    controller.navigationItem.title = candy!.name
-                    controller.navigationItem.leftItemsSupplementBackButton = true
-                }
+        let cell = sender as! UITableViewCell
+        if (segue.identifier == "goToUnit"){
+            if let indexPath = tableView.indexPath(for: cell) {
+                let candy = self.units?[indexPath.row]
+                
+                let controller = segue.destination as! UnitTableViewController
+                controller.navigationItem.title = candy?.name
+                controller.unit = candy
             }
         }
     }
- 
+    
 
 }

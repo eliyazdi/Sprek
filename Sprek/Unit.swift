@@ -18,6 +18,8 @@ class Unit: Object {
 //  }
     dynamic var name = ""
     dynamic var course: Course?
+    
+    /// Deletes course as well as all units and cards associated with it
     func delete(){
         let realm = try! Realm()
         let cards = realm.objects(Card.self).filter("unit == %@", self)
@@ -26,7 +28,30 @@ class Unit: Object {
             realm.delete(self)
         }
     }
-    func getStrength(){
-        
+    
+    /// Returns the average strength of all cards in a unit
+    func getStrength() -> Int{
+        let realm = try! Realm()
+        let cards = realm.objects(Card.self).filter("unit == %@", self)
+        var strengths: [Int] = []
+        for card in cards{
+            strengths.append(card.strength)
+        }
+        return strengths.roundAverage
+    }
+}
+
+extension Array where Element == Int {
+    /// Returns the sum of all elements in the array
+    var total: Element {
+        return reduce(0, +)
+    }
+    /// Returns the average of all elements in the array
+    var average: Double {
+        return isEmpty ? 0 : Double(reduce(0, +)) / Double(count)
+    }
+    /// Returns rounded average of all elements in the array
+    var roundAverage: Int {
+        return Int(round(isEmpty ? 0 : Double(reduce(0, +)) / Double(count)))
     }
 }

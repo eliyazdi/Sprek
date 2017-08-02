@@ -8,12 +8,13 @@
 
 import UIKit
 
-class TranslationExerciseViewController: UIViewController, UITextViewDelegate {
+class TranslationExerciseViewController: ExerciseViewController, UITextViewDelegate {
 
     @IBOutlet weak var inputBox: UITextView!
     @IBOutlet weak var sentenceLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
     @IBOutlet weak var checkButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

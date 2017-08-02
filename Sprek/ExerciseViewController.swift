@@ -1,15 +1,18 @@
 //
-//  VocabExerciseViewController.swift
+//  ExerciseViewController.swift
 //  Sprek
 //
-//  Created by Eli Yazdi on 7/30/17.
+//  Created by Eli Yazdi on 8/2/17.
 //  Copyright © 2017 Eli Yazdi. All rights reserved.
 //
 
 import UIKit
 
-class VocabExerciseViewController: ExerciseViewController {
+class ExerciseViewController: UIViewController {
 
+    
+    var delegate: ExerciseDelegate?
+    var card: Card?
     override func viewDidLoad() {
         super.viewDidLoad()
 

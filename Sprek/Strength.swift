@@ -10,6 +10,8 @@ import Foundation
 
 class Strength{
     var emoji: String?
+    
+    /// Return emoji from strength Int
     convenience init(emojiFrom strength: Int){
         self.init()
         switch strength{
