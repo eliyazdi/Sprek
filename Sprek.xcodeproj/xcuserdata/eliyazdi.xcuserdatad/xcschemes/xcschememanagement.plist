@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Sprek Mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Sprek.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,21 @@
 			<true/>
 		</dict>
 		<key>FB2B67D71EF96AE2003620E8</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB37EBA31F32AF2A00303409</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB37EBB31F32AF2B00303409</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FB37EBBE1F32AF2B00303409</key>
 		<dict>
 			<key>primary</key>
 			<true/>
