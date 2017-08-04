@@ -110,7 +110,7 @@ class UnitsTableViewController: UITableViewController {
         // Configure the cell...
         let unit = units![indexPath.row]
         cell.unitNameLabel.text = unit.name
-        let strength = Strength(emojiFrom: unit.getStrength()).emoji
+        let strength = Strength(emojiFrom: unit.strength).emoji
         cell.strengthLabel.text = strength!
         
         return cell

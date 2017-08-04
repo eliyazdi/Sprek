@@ -30,12 +30,12 @@ class Course: Object {
     }
     
     /// Returns the average strength of all units in a course
-    func getStrength() -> Int{
+    var strength: Int{
         let realm = try! Realm()
         let units = realm.objects(Unit.self).filter("course == %@", self)
         var strengths: [Int] = []
         for unit in units{
-            strengths.append(unit.getStrength())
+            strengths.append(unit.strength)
         }
         return strengths.roundAverage
     }

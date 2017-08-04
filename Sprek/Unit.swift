@@ -30,7 +30,7 @@ class Unit: Object {
     }
     
     /// Returns the average strength of all cards in a unit
-    func getStrength() -> Int{
+    var strength: Int {
         let realm = try! Realm()
         let cards = realm.objects(Card.self).filter("unit == %@", self)
         var strengths: [Int] = []
