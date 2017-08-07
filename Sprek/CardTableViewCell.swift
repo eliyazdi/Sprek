@@ -27,7 +27,7 @@ class CardTableViewCell: UITableViewCell {
     func playAudio(){
         if self.card.audio != nil{
             audioPlayer = try! AVAudioPlayer(data: self.card.audio!)
-            audioPlayer.prepareToPlay()
+            audioPlayer.volume = 1.0
             audioPlayer.play()
         }
     }

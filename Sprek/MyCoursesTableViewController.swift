@@ -34,7 +34,6 @@ class MyCoursesTableViewController: UITableViewController {
         self.navigationController?.navigationBar.barTintColor = Colors().primary
         self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(openNewCourseView))
         
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
         
@@ -48,6 +47,10 @@ class MyCoursesTableViewController: UITableViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.tableView.reloadData()
     }
 
     // MARK: - Table view data source
@@ -71,15 +74,12 @@ class MyCoursesTableViewController: UITableViewController {
         let lang = Langs().arr.filter { $0.key == course.lang }
         cell.FlagImage.image = UIImage(named: "\(lang[0].flag).png")
         cell.TitleLabel.text = course.name
-        let strength = Strength(emojiFrom: course.getStrength()).emoji
+        let strength = Strength(emojiFrom: course.strength).emoji
         cell.StrengthLabel.text = "Strength: \(strength!)"
 
         return cell
     }
     
-    func openNewCourseView(){
-        self.performSegue(withIdentifier: "goToSelectLang", sender: self)
-    }
  
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {

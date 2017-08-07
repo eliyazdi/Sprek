@@ -17,3 +17,10 @@ class Colors{
         
     }
 }
+
+extension UIColor{
+    static let primary = UIColor(red:0.93, green:0.12, blue:0.47, alpha:1.0)
+    static let dark = UIColor(red:0.83, green:0.00, blue:0.74, alpha:1.0)
+    static let gray = UIColor(red:0.58, green:0.60, blue:0.60, alpha:1.0)
+    static let disabled = UIColor(red:1.00, green:0.59, blue:0.96, alpha:1.0)
+}

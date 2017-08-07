@@ -28,16 +28,7 @@ class VocabWithLatinTableViewCell: CardTableViewCell {
         strengthLabel.text = Strength(emojiFrom: self.card.strength).emoji
         if(self.card.audio == nil){
 //            self.playButton.isHidden = true
-            self.playButton.hideView()
-            let noAudioConstraint = NSLayoutConstraint(
-                item: targetWordLabel,
-                attribute: .left,
-                relatedBy: .equal,
-                toItem: self,
-                attribute: .left,
-                multiplier: 1,
-                constant: 25)
-            self.addConstraint(noAudioConstraint)
+            self.playButton.isHidden = true
         }else{
             self.playButton.addTarget(self, action: #selector(playAudio), for: .touchUpInside)
         }

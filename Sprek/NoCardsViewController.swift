@@ -1,26 +1,29 @@
 //
-//  ExerciseViewController.swift
+//  NoCardsViewController.swift
 //  Sprek
 //
-//  Created by Eli Yazdi on 8/2/17.
+//  Created by Eli Yazdi on 8/6/17.
 //  Copyright © 2017 Eli Yazdi. All rights reserved.
 //
 
 import UIKit
-import AVFoundation
 
-class ExerciseViewController: UIViewController {
+class NoCardsViewController: UIViewController {
 
+    @IBOutlet weak var okButton: UIButton!
     
     var delegate: ExerciseDelegate?
-    var card: Card?
-    var player: AVAudioPlayer?
-    var reversed: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("hello")
+        self.okButton.layer.cornerRadius = 20
+        self.okButton.addTarget(self, action: #selector(done), for: .touchUpInside)
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+//        self.delegate?.setInstructions("")
     }
 
     override func didReceiveMemoryWarning() {
@@ -28,16 +31,8 @@ class ExerciseViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func randomBool() -> Bool {
-        return arc4random_uniform(2) == 0
-    }
-    
-    func playAudio(){
-        if(self.card?.audio != nil){
-            player = try! AVAudioPlayer(data: (self.card?.audio)!)
-            player?.volume = 1.0
-            player?.play()
-        }
+    func done(){
+        self.delegate?.dismissSession()
     }
     
 

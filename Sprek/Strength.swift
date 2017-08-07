@@ -18,9 +18,9 @@ class Strength{
         case 0:
             self.emoji = "👍"
         case 1:
-            self.emoji = "😰"
+            self.emoji = "😕"
         case 2:
-            self.emoji = "☹️"
+            self.emoji = "😏"
         case 3:
             self.emoji = "🙂"
         case 4:

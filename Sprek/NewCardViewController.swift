@@ -10,17 +10,14 @@ import UIKit
 import RealmSwift
 import AVFoundation
 
-class NewCardViewController: UIViewController, UITextFieldDelegate, AVAudioRecorderDelegate {
+class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudioRecorderDelegate {
     
     var audioRecorder:AVAudioRecorder!
     var audioPlayer:AVAudioPlayer!
     
-    @IBOutlet weak var targetLabel: UILabel!
     @IBOutlet weak var targetBox: UITextField!
-    @IBOutlet weak var latinBox: UITextField!
-    @IBOutlet weak var latinLabel: UILabel!
-    @IBOutlet weak var translationLabel: UILabel!
     @IBOutlet weak var translationBox: UITextField!
+    @IBOutlet weak var latinBox: UITextField!
     @IBOutlet weak var recordAudioButton: UIButton!
     
     var forEditing: Bool?
@@ -29,6 +26,9 @@ class NewCardViewController: UIViewController, UITextFieldDelegate, AVAudioRecor
     var audio: Data? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        self.recordAudioButton.contentHorizontalAlignment = .left
+        self.recordAudioButton.setTitle("Record audio", for: .normal)
         
         let audioFilename = self.getDocumentsDirectory().appendingPathComponent("recording.m4a")
         
@@ -41,12 +41,9 @@ class NewCardViewController: UIViewController, UITextFieldDelegate, AVAudioRecor
         do{
             self.audioRecorder = try AVAudioRecorder(url: audioFilename, settings: settings)
             self.audioRecorder.delegate = self
-            self.audioRecorder.record()
         }catch{
             
         }
-
-        self.recordAudioButton.setTitle("Record audio", for: .normal)
         
         targetBox.delegate = self
         latinBox.delegate = self
@@ -58,9 +55,9 @@ class NewCardViewController: UIViewController, UITextFieldDelegate, AVAudioRecor
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addNewCard))
         
         if(forSentence!){
-            targetLabel.text = "Sentence in target language"
-            latinLabel.text = "Transliteration of sentence (optional)"
-            translationLabel.text = "Translation of sentence"
+            targetBox.placeholder = "Sentence in target language"
+            latinBox.placeholder = "Transliteration of sentence (optional)"
+            translationBox.placeholder = "Translation of sentence"
             self.navigationItem.title = "New Sentence"
             targetBox.autocapitalizationType = .sentences
             translationBox.autocapitalizationType = .sentences
@@ -113,7 +110,6 @@ class NewCardViewController: UIViewController, UITextFieldDelegate, AVAudioRecor
             audioRecorder.record()
             self.recordAudioButton.setTitle("Stop recording", for: .normal)
         }
-        
     }
     
     func getDocumentsDirectory() -> URL {

@@ -27,11 +27,20 @@ class UnitTableViewController: UITableViewController {
             realm.objects(Card.self).filter("isSentence == true && unit == %@", unit!)
         ]
         self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(studySession))
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+    }
+    
+    
+    func studySession(){
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "sessionViewController") as! SessionViewController
+        newVC.unit = self.unit
+        self.present(newVC, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

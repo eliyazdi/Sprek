@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0CA728E001E1B3BA48CD1B23 /* Pods_Sprek_MacUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 639A3B1976F2FDA7868268D1 /* Pods_Sprek_MacUITests.framework */; };
+		1323F6D6AE8EE61E1DE64C0F /* Pods_Sprek_MacTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1CD6B873F15657B30E64329 /* Pods_Sprek_MacTests.framework */; };
+		5B872AA03E6B0409C8D4DD5A /* Pods_SprekUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F7BB6A019CC7CCE6C86487F6 /* Pods_SprekUITests.framework */; };
+		8E8A0D1B81AAC9FC82D2237C /* Pods_SprekTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1856E7BDB8D82F52B0AA40FA /* Pods_SprekTests.framework */; };
+		BD1B285CFED56C8CDF6D3E70 /* Pods_Sprek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 250AFCD1634B0FD89058D335 /* Pods_Sprek.framework */; };
+		C61EF2F8AAF002F1EB67D3D5 /* Pods_Sprek_Mac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 426E2F86F280210D409FDE7C /* Pods_Sprek_Mac.framework */; };
 		FB1398F71F12ACF5003F3BEC /* Fabric.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398F51F12ACF5003F3BEC /* Fabric.framework */; };
 		FB1398F81F12ACF5003F3BEC /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB1398F61F12ACF5003F3BEC /* Crashlytics.framework */; };
 		FB27FB561F2A795E0043EB07 /* MyCoursesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB27FB551F2A795E0043EB07 /* MyCoursesTableViewController.swift */; };
@@ -24,14 +30,6 @@
 		FB37EBAE1F32AF2B00303409 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FB37EBAC1F32AF2B00303409 /* Main.storyboard */; };
 		FB37EBB91F32AF2B00303409 /* Sprek_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37EBB81F32AF2B00303409 /* Sprek_MacTests.swift */; };
 		FB37EBC41F32AF2C00303409 /* Sprek_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB37EBC31F32AF2C00303409 /* Sprek_MacUITests.swift */; };
-		FB37EBD91F32B26D00303409 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBD71F32B26D00303409 /* Realm.framework */; };
-		FB37EBDA1F32B26D00303409 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBD71F32B26D00303409 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FB37EBDB1F32B26D00303409 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBD81F32B26D00303409 /* RealmSwift.framework */; };
-		FB37EBDC1F32B26D00303409 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBD81F32B26D00303409 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FB37EBE61F32B30800303409 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBE41F32B30800303409 /* Realm.framework */; };
-		FB37EBE71F32B30800303409 /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBE41F32B30800303409 /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		FB37EBE81F32B30800303409 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBE51F32B30800303409 /* RealmSwift.framework */; };
-		FB37EBE91F32B30800303409 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FB37EBE51F32B30800303409 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		FB37EBEB1F32B32900303409 /* levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744861F30F443009D4A4E /* levenshtein.swift */; };
 		FB37EBEC1F32B32900303409 /* Strength.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744841F30EF12009D4A4E /* Strength.swift */; };
 		FB37EBED1F32B32900303409 /* Langs.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB35D6711F203164006BA76E /* Langs.swift */; };
@@ -674,8 +672,14 @@
 		FB39CFDE1F1FF3400074D115 /* ZA.png in Resources */ = {isa = PBXBuildFile; fileRef = FB39CEA21F1FF33F0074D115 /* ZA.png */; };
 		FB39CFDF1F1FF3400074D115 /* ZM.png in Resources */ = {isa = PBXBuildFile; fileRef = FB39CEA31F1FF33F0074D115 /* ZM.png */; };
 		FB39CFE01F1FF3400074D115 /* ZW.png in Resources */ = {isa = PBXBuildFile; fileRef = FB39CEA41F1FF33F0074D115 /* ZW.png */; };
+		FB573C2C1F383D6600861F83 /* chime_done.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB573C2B1F383D6600861F83 /* chime_done.wav */; };
+		FB573C2D1F383D6600861F83 /* chime_done.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB573C2B1F383D6600861F83 /* chime_done.wav */; };
+		FB573C2F1F3840F800861F83 /* zap_down_quick.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB573C2E1F3840F800861F83 /* zap_down_quick.wav */; };
+		FB573C301F3840F800861F83 /* zap_down_quick.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB573C2E1F3840F800861F83 /* zap_down_quick.wav */; };
 		FB5F031F1F21783B00EAC3BA /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F031E1F21783B00EAC3BA /* Course.swift */; };
 		FB5F03211F22674C00EAC3BA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5F03201F22674C00EAC3BA /* Icons.xcassets */; };
+		FB6FB0DC1F39009C003B9BFF /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB0DB1F39009C003B9BFF /* SignUpTableViewController.swift */; };
+		FB6FB0DE1F391257003B9BFF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB0DD1F391257003B9BFF /* SettingsViewController.swift */; };
 		FB96BC601F3228D7008860B8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */; };
 		FBA1A67E1F2B9B0B0007A636 /* UnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */; };
 		FBA1A6801F2B9B360007A636 /* UnitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */; };
@@ -683,11 +687,14 @@
 		FBA1A6851F2BC0E40007A636 /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A6841F2BC0E40007A636 /* Card.swift */; };
 		FBA1A68F1F2BD2BD0007A636 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FBA1A68E1F2BD2BD0007A636 /* Media.xcassets */; };
 		FBA1A6911F2BD5040007A636 /* TabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A6901F2BD5040007A636 /* TabController.swift */; };
+		FBA4B72C1F362C44007AFBE2 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4B72B1F362C44007AFBE2 /* Colors.swift */; };
 		FBA744831F30DE84009D4A4E /* HideableUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744821F30DE84009D4A4E /* HideableUIView.swift */; };
 		FBA744851F30EF12009D4A4E /* Strength.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744841F30EF12009D4A4E /* Strength.swift */; };
 		FBA744871F30F443009D4A4E /* levenshtein.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA744861F30F443009D4A4E /* levenshtein.swift */; };
 		FBADFBF51F1FC78F0036B5A0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADFBF41F1FC78F0036B5A0 /* Colors.swift */; };
 		FBADFBF71F1FDA3A0036B5A0 /* CourseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBADFBF61F1FDA3A0036B5A0 /* CourseTableViewCell.swift */; };
+		FBAF05591F38F10B0022E4E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBAF05581F38F10B0022E4E2 /* GoogleService-Info.plist */; };
+		FBAF055A1F38F10B0022E4E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = FBAF05581F38F10B0022E4E2 /* GoogleService-Info.plist */; };
 		FBB9C02B1F2EA158009A7CB5 /* CardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBB9C02A1F2EA158009A7CB5 /* CardTableViewCell.swift */; };
 		FBC2E3D81F2E296200A2CB18 /* TranslationExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3D71F2E296200A2CB18 /* TranslationExerciseViewController.swift */; };
 		FBC2E3DA1F2E296E00A2CB18 /* VocabExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3D91F2E296E00A2CB18 /* VocabExerciseViewController.swift */; };
@@ -696,6 +703,9 @@
 		FBC2E3E21F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3E11F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift */; };
 		FBC2E3E41F2E865700A2CB18 /* SentenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3E31F2E865700A2CB18 /* SentenceTableViewCell.swift */; };
 		FBC2E3E61F2E893500A2CB18 /* HeaderTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBC2E3E51F2E893500A2CB18 /* HeaderTableViewCell.swift */; };
+		FBF140D71F37965400B53C5B /* SessionCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF140D61F37965400B53C5B /* SessionCompletedViewController.swift */; };
+		FBF140D91F37995500B53C5B /* NoCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF140D81F37995500B53C5B /* NoCardsViewController.swift */; };
+		FBF140DB1F37AF7400B53C5B /* WordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF140DA1F37AF7400B53C5B /* WordsCollectionViewCell.swift */; };
 		FBFDED2B1F229EED00DD1E3D /* LangCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDED2A1F229EED00DD1E3D /* LangCell.swift */; };
 		FBFDED2D1F22A15600DD1E3D /* LangSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDED2C1F22A15600DD1E3D /* LangSelectTableViewController.swift */; };
 		FBFF4BC21F2F8CEC00A4F52D /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF4BC11F2F8CEC00A4F52D /* NewCardViewController.swift */; };
@@ -733,26 +743,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		FB1398F21F128EC7003F3BEC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				FB37EBDC1F32B26D00303409 /* RealmSwift.framework in Embed Frameworks */,
-				FB37EBDA1F32B26D00303409 /* Realm.framework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		FB37EBEA1F32B30800303409 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				FB37EBE91F32B30800303409 /* RealmSwift.framework in Embed Frameworks */,
-				FB37EBE71F32B30800303409 /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FBA4B7241F36292C007AFBE2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -760,6 +766,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D337A8B3CC9DE23B333ED99 /* Pods-Sprek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek/Pods-Sprek.debug.xcconfig"; sourceTree = "<group>"; };
+		1856E7BDB8D82F52B0AA40FA /* Pods_SprekTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SprekTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		18BFDB2DC2D9A580590C242E /* Pods-SprekTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprekTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SprekTests/Pods-SprekTests.release.xcconfig"; sourceTree = "<group>"; };
+		22BD968253558BBA72DAA1D5 /* Pods-Sprek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek/Pods-Sprek.release.xcconfig"; sourceTree = "<group>"; };
+		2498EF4F9E2801936424902B /* Pods-SprekUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprekUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SprekUITests/Pods-SprekUITests.release.xcconfig"; sourceTree = "<group>"; };
+		250AFCD1634B0FD89058D335 /* Pods_Sprek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2955D8CACB8D106BFBBB5083 /* Pods-Sprek Mac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek Mac.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek Mac/Pods-Sprek Mac.debug.xcconfig"; sourceTree = "<group>"; };
+		2BEB3808E6631E5EB4C7C797 /* Pods-Sprek MacTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek MacTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek MacTests/Pods-Sprek MacTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E26EA4C379C8B2E92822EDE /* Pods-Sprek MacTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek MacTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek MacTests/Pods-Sprek MacTests.debug.xcconfig"; sourceTree = "<group>"; };
+		426E2F86F280210D409FDE7C /* Pods_Sprek_Mac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprek_Mac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		639A3B1976F2FDA7868268D1 /* Pods_Sprek_MacUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprek_MacUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		79C1EE131AAFB27B1221A552 /* Pods-SprekTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprekTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SprekTests/Pods-SprekTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8A9D025CDB33204AEEBA1949 /* Pods-Sprek MacUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek MacUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek MacUITests/Pods-Sprek MacUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		930734EEF78A917D70F013B0 /* Pods-Sprek Mac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek Mac.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek Mac/Pods-Sprek Mac.release.xcconfig"; sourceTree = "<group>"; };
+		9E5166D0FF74BB1D3738F9DA /* Pods-Sprek MacUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sprek MacUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Sprek MacUITests/Pods-Sprek MacUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E1CD6B873F15657B30E64329 /* Pods_Sprek_MacTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sprek_MacTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F77A550162B5BDF135A4A8B9 /* Pods-SprekUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SprekUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SprekUITests/Pods-SprekUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		F7BB6A019CC7CCE6C86487F6 /* Pods_SprekUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SprekUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1398F51F12ACF5003F3BEC /* Fabric.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Fabric.framework; sourceTree = "<group>"; };
 		FB1398F61F12ACF5003F3BEC /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
 		FB27FB551F2A795E0043EB07 /* MyCoursesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoursesTableViewController.swift; sourceTree = "<group>"; };
@@ -789,10 +813,6 @@
 		FB37EBBF1F32AF2B00303409 /* Sprek MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sprek MacUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB37EBC31F32AF2C00303409 /* Sprek_MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sprek_MacUITests.swift; sourceTree = "<group>"; };
 		FB37EBC51F32AF2C00303409 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FB37EBD71F32B26D00303409 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = RealmiOS/Realm.framework; sourceTree = "<group>"; };
-		FB37EBD81F32B26D00303409 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = RealmiOS/RealmSwift.framework; sourceTree = "<group>"; };
-		FB37EBE41F32B30800303409 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = RealmMac/Realm.framework; sourceTree = "<group>"; };
-		FB37EBE51F32B30800303409 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = RealmMac/RealmSwift.framework; sourceTree = "<group>"; };
 		FB39CD641F1FEEB80074D115 /* langs.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = langs.json; path = Sprek/langs.json; sourceTree = "<group>"; };
 		FB39CD661F1FF2020074D115 /* NewCourseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCourseViewController.swift; sourceTree = "<group>"; };
 		FB39CD691F1FF33F0074D115 /* A.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = A.png; sourceTree = "<group>"; };
@@ -1111,8 +1131,12 @@
 		FB39CEA21F1FF33F0074D115 /* ZA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZA.png; sourceTree = "<group>"; };
 		FB39CEA31F1FF33F0074D115 /* ZM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZM.png; sourceTree = "<group>"; };
 		FB39CEA41F1FF33F0074D115 /* ZW.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ZW.png; sourceTree = "<group>"; };
+		FB573C2B1F383D6600861F83 /* chime_done.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = chime_done.wav; sourceTree = "<group>"; };
+		FB573C2E1F3840F800861F83 /* zap_down_quick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zap_down_quick.wav; sourceTree = "<group>"; };
 		FB5F031E1F21783B00EAC3BA /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		FB5F03201F22674C00EAC3BA /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		FB6FB0DB1F39009C003B9BFF /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		FB6FB0DD1F391257003B9BFF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTableViewCell.swift; sourceTree = "<group>"; };
 		FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsTableViewController.swift; sourceTree = "<group>"; };
@@ -1120,11 +1144,13 @@
 		FBA1A6841F2BC0E40007A636 /* Card.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
 		FBA1A68E1F2BD2BD0007A636 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Media.xcassets; path = Sprek/Media.xcassets; sourceTree = "<group>"; };
 		FBA1A6901F2BD5040007A636 /* TabController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabController.swift; sourceTree = "<group>"; };
+		FBA4B72B1F362C44007AFBE2 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FBA744821F30DE84009D4A4E /* HideableUIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideableUIView.swift; sourceTree = "<group>"; };
 		FBA744841F30EF12009D4A4E /* Strength.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Strength.swift; path = Sprek/Strength.swift; sourceTree = "<group>"; };
 		FBA744861F30F443009D4A4E /* levenshtein.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = levenshtein.swift; path = Sprek/levenshtein.swift; sourceTree = "<group>"; };
 		FBADFBF41F1FC78F0036B5A0 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FBADFBF61F1FDA3A0036B5A0 /* CourseTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseTableViewCell.swift; sourceTree = "<group>"; };
+		FBAF05581F38F10B0022E4E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FBB9C02A1F2EA158009A7CB5 /* CardTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardTableViewCell.swift; sourceTree = "<group>"; };
 		FBC2E3D71F2E296200A2CB18 /* TranslationExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TranslationExerciseViewController.swift; sourceTree = "<group>"; };
 		FBC2E3D91F2E296E00A2CB18 /* VocabExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabExerciseViewController.swift; sourceTree = "<group>"; };
@@ -1133,6 +1159,9 @@
 		FBC2E3E11F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VocabWithLatinTableViewCell.swift; sourceTree = "<group>"; };
 		FBC2E3E31F2E865700A2CB18 /* SentenceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SentenceTableViewCell.swift; sourceTree = "<group>"; };
 		FBC2E3E51F2E893500A2CB18 /* HeaderTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeaderTableViewCell.swift; sourceTree = "<group>"; };
+		FBF140D61F37965400B53C5B /* SessionCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCompletedViewController.swift; sourceTree = "<group>"; };
+		FBF140D81F37995500B53C5B /* NoCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCardsViewController.swift; sourceTree = "<group>"; };
+		FBF140DA1F37AF7400B53C5B /* WordsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsCollectionViewCell.swift; sourceTree = "<group>"; };
 		FBFDED2A1F229EED00DD1E3D /* LangCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangCell.swift; sourceTree = "<group>"; };
 		FBFDED2C1F22A15600DD1E3D /* LangSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangSelectTableViewController.swift; sourceTree = "<group>"; };
 		FBFF4BC11F2F8CEC00A4F52D /* NewCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
@@ -1143,10 +1172,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB37EBD91F32B26D00303409 /* Realm.framework in Frameworks */,
 				FB1398F81F12ACF5003F3BEC /* Crashlytics.framework in Frameworks */,
-				FB37EBDB1F32B26D00303409 /* RealmSwift.framework in Frameworks */,
 				FB1398F71F12ACF5003F3BEC /* Fabric.framework in Frameworks */,
+				BD1B285CFED56C8CDF6D3E70 /* Pods_Sprek.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1154,6 +1182,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E8A0D1B81AAC9FC82D2237C /* Pods_SprekTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1161,6 +1190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B872AA03E6B0409C8D4DD5A /* Pods_SprekUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1168,8 +1198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FB37EBE81F32B30800303409 /* RealmSwift.framework in Frameworks */,
-				FB37EBE61F32B30800303409 /* Realm.framework in Frameworks */,
+				C61EF2F8AAF002F1EB67D3D5 /* Pods_Sprek_Mac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1177,6 +1206,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1323F6D6AE8EE61E1DE64C0F /* Pods_Sprek_MacTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1184,19 +1214,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0CA728E001E1B3BA48CD1B23 /* Pods_Sprek_MacUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1D94AB8A040E8DB935599958 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D337A8B3CC9DE23B333ED99 /* Pods-Sprek.debug.xcconfig */,
+				22BD968253558BBA72DAA1D5 /* Pods-Sprek.release.xcconfig */,
+				2955D8CACB8D106BFBBB5083 /* Pods-Sprek Mac.debug.xcconfig */,
+				930734EEF78A917D70F013B0 /* Pods-Sprek Mac.release.xcconfig */,
+				2E26EA4C379C8B2E92822EDE /* Pods-Sprek MacTests.debug.xcconfig */,
+				2BEB3808E6631E5EB4C7C797 /* Pods-Sprek MacTests.release.xcconfig */,
+				8A9D025CDB33204AEEBA1949 /* Pods-Sprek MacUITests.debug.xcconfig */,
+				9E5166D0FF74BB1D3738F9DA /* Pods-Sprek MacUITests.release.xcconfig */,
+				79C1EE131AAFB27B1221A552 /* Pods-SprekTests.debug.xcconfig */,
+				18BFDB2DC2D9A580590C242E /* Pods-SprekTests.release.xcconfig */,
+				F77A550162B5BDF135A4A8B9 /* Pods-SprekUITests.debug.xcconfig */,
+				2498EF4F9E2801936424902B /* Pods-SprekUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2DB013001D4D91495FF74061 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				250AFCD1634B0FD89058D335 /* Pods_Sprek.framework */,
+				426E2F86F280210D409FDE7C /* Pods_Sprek_Mac.framework */,
+				E1CD6B873F15657B30E64329 /* Pods_Sprek_MacTests.framework */,
+				639A3B1976F2FDA7868268D1 /* Pods_Sprek_MacUITests.framework */,
+				1856E7BDB8D82F52B0AA40FA /* Pods_SprekTests.framework */,
+				F7BB6A019CC7CCE6C86487F6 /* Pods_SprekUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FB2B67B01EF96AE2003620E8 = {
 			isa = PBXGroup;
 			children = (
-				FB37EBE41F32B30800303409 /* Realm.framework */,
-				FB37EBE51F32B30800303409 /* RealmSwift.framework */,
-				FB37EBD71F32B26D00303409 /* Realm.framework */,
-				FB37EBD81F32B26D00303409 /* RealmSwift.framework */,
 				FB1398F51F12ACF5003F3BEC /* Fabric.framework */,
 				FB1398F61F12ACF5003F3BEC /* Crashlytics.framework */,
 				FB37EB9F1F32ADAA00303409 /* Common */,
@@ -1207,6 +1266,8 @@
 				FB37EBB71F32AF2B00303409 /* Sprek MacTests */,
 				FB37EBC21F32AF2C00303409 /* Sprek MacUITests */,
 				FB2B67BA1EF96AE2003620E8 /* Products */,
+				1D94AB8A040E8DB935599958 /* Pods */,
+				2DB013001D4D91495FF74061 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -1240,6 +1301,7 @@
 				FB2B67C81EF96AE2003620E8 /* Info.plist */,
 				FBFDED291F229A2D00DD1E3D /* Edit Course View */,
 				FBA1A6901F2BD5040007A636 /* TabController.swift */,
+				FB6FB0DA1F39007D003B9BFF /* Settings */,
 			);
 			path = Sprek;
 			sourceTree = "<group>";
@@ -1274,6 +1336,8 @@
 		FB37EB9F1F32ADAA00303409 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				FBAF05581F38F10B0022E4E2 /* GoogleService-Info.plist */,
+				FB573C2A1F383D5C00861F83 /* Sounds */,
 				FB39CD681F1FF33F0074D115 /* flags */,
 				FBA744861F30F443009D4A4E /* levenshtein.swift */,
 				FBA744841F30EF12009D4A4E /* Strength.swift */,
@@ -1290,6 +1354,7 @@
 			children = (
 				FB37EBA61F32AF2B00303409 /* AppDelegate.swift */,
 				FB37EBA81F32AF2B00303409 /* ViewController.swift */,
+				FBA4B72B1F362C44007AFBE2 /* Colors.swift */,
 				FB37EBAA1F32AF2B00303409 /* Assets.xcassets */,
 				FB37EBAC1F32AF2B00303409 /* Main.storyboard */,
 				FB37EBAF1F32AF2B00303409 /* Info.plist */,
@@ -1639,6 +1704,24 @@
 			path = Sprek/flags;
 			sourceTree = "<group>";
 		};
+		FB573C2A1F383D5C00861F83 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				FB573C2B1F383D6600861F83 /* chime_done.wav */,
+				FB573C2E1F3840F800861F83 /* zap_down_quick.wav */,
+			);
+			name = Sounds;
+			sourceTree = "<group>";
+		};
+		FB6FB0DA1F39007D003B9BFF /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FB6FB0DD1F391257003B9BFF /* SettingsViewController.swift */,
+				FB6FB0DB1F39009C003B9BFF /* SignUpTableViewController.swift */,
+			);
+			name = Settings;
+			sourceTree = "<group>";
+		};
 		FB96BC5C1F3119F4008860B8 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -1678,8 +1761,11 @@
 			children = (
 				FBC2E3D71F2E296200A2CB18 /* TranslationExerciseViewController.swift */,
 				FBC2E3D91F2E296E00A2CB18 /* VocabExerciseViewController.swift */,
+				FBF140DA1F37AF7400B53C5B /* WordsCollectionViewCell.swift */,
 				FBC2E3DB1F2E2E0B00A2CB18 /* SessionViewController.swift */,
 				FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */,
+				FBF140D61F37965400B53C5B /* SessionCompletedViewController.swift */,
+				FBF140D81F37995500B53C5B /* NoCardsViewController.swift */,
 			);
 			name = Session;
 			sourceTree = "<group>";
@@ -1701,12 +1787,14 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB2B67E11EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "Sprek" */;
 			buildPhases = (
+				ADCC9B8CE83DF581D7454E4C /* [CP] Check Pods Manifest.lock */,
 				FB2B67B51EF96AE2003620E8 /* Sources */,
 				FB2B67B61EF96AE2003620E8 /* Frameworks */,
 				FB2B67B71EF96AE2003620E8 /* Resources */,
-				FB1398F21F128EC7003F3BEC /* Embed Frameworks */,
-				FB1398F31F128F0A003F3BEC /* ShellScript */,
 				FB1398F41F12ACD6003F3BEC /* ShellScript */,
+				FBA4B7241F36292C007AFBE2 /* Embed Frameworks */,
+				A589745BE1B9DC850948D395 /* [CP] Embed Pods Frameworks */,
+				449D02F070A16C1339BEB66D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1721,9 +1809,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB2B67E41EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekTests" */;
 			buildPhases = (
+				8A8A66C2E34DDF01B4BDE154 /* [CP] Check Pods Manifest.lock */,
 				FB2B67C91EF96AE2003620E8 /* Sources */,
 				FB2B67CA1EF96AE2003620E8 /* Frameworks */,
 				FB2B67CB1EF96AE2003620E8 /* Resources */,
+				3581E667D13ED01BC6EFDF8C /* [CP] Embed Pods Frameworks */,
+				8F44C00D18B82DF177711F00 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1739,9 +1830,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB2B67E71EF96AE2003620E8 /* Build configuration list for PBXNativeTarget "SprekUITests" */;
 			buildPhases = (
+				B35E803C8AD0FB90FF620601 /* [CP] Check Pods Manifest.lock */,
 				FB2B67D41EF96AE2003620E8 /* Sources */,
 				FB2B67D51EF96AE2003620E8 /* Frameworks */,
 				FB2B67D61EF96AE2003620E8 /* Resources */,
+				A2C73FE7E05D9D7638A7164B /* [CP] Embed Pods Frameworks */,
+				B7C9D921ADC5E9000B1DBDDF /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1757,10 +1851,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB37EBC61F32AF2C00303409 /* Build configuration list for PBXNativeTarget "Sprek Mac" */;
 			buildPhases = (
+				F320A57FD41D774F401E9E16 /* [CP] Check Pods Manifest.lock */,
 				FB37EBA01F32AF2A00303409 /* Sources */,
 				FB37EBA11F32AF2A00303409 /* Frameworks */,
 				FB37EBA21F32AF2A00303409 /* Resources */,
 				FB37EBEA1F32B30800303409 /* Embed Frameworks */,
+				FEEA0B07697D94E4845AA422 /* [CP] Embed Pods Frameworks */,
+				CC131ADFE9A1DAF817614588 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1775,9 +1872,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB37EBC91F32AF2C00303409 /* Build configuration list for PBXNativeTarget "Sprek MacTests" */;
 			buildPhases = (
+				732EC15826D02AD097409FAB /* [CP] Check Pods Manifest.lock */,
 				FB37EBB01F32AF2B00303409 /* Sources */,
 				FB37EBB11F32AF2B00303409 /* Frameworks */,
 				FB37EBB21F32AF2B00303409 /* Resources */,
+				7C560DB9434CE956C4DDC636 /* [CP] Embed Pods Frameworks */,
+				B6DFF0A3676EBDB25AFB4D09 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1793,9 +1893,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FB37EBCC1F32AF2C00303409 /* Build configuration list for PBXNativeTarget "Sprek MacUITests" */;
 			buildPhases = (
+				00FEDDAF5A37DDF68EBFC543 /* [CP] Check Pods Manifest.lock */,
 				FB37EBBB1F32AF2B00303409 /* Sources */,
 				FB37EBBC1F32AF2B00303409 /* Frameworks */,
 				FB37EBBD1F32AF2B00303409 /* Resources */,
+				B0881B8793A68CE4CFB8559E /* [CP] Embed Pods Frameworks */,
+				46723665AB9D87AB2C34720F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1820,6 +1923,7 @@
 					FB2B67B81EF96AE2003620E8 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = A2KUJPLV68;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					FB2B67CC1EF96AE2003620E8 = {
@@ -2002,6 +2106,7 @@
 				FB39CF4C1F1FF3400074D115 /* LU.png in Resources */,
 				FB39CF581F1FF3400074D115 /* ML.png in Resources */,
 				FB39CFB01F1FF3400074D115 /* TA.png in Resources */,
+				FBAF05591F38F10B0022E4E2 /* GoogleService-Info.plist in Resources */,
 				FB39CEC41F1FF33F0074D115 /* BM.png in Resources */,
 				FB39CF161F1FF3400074D115 /* GQ.png in Resources */,
 				FB39CFD91F1FF3400074D115 /* Y.png in Resources */,
@@ -2075,6 +2180,7 @@
 				FB39CEE61F1FF3400074D115 /* CY.png in Resources */,
 				FB39CF891F1FF3400074D115 /* QA.png in Resources */,
 				FB39CEED1F1FF3400074D115 /* DM.png in Resources */,
+				FB573C2F1F3840F800861F83 /* zap_down_quick.wav in Resources */,
 				FB39CEA51F1FF33F0074D115 /* A.png in Resources */,
 				FB39CF061F1FF3400074D115 /* G.png in Resources */,
 				FB39CF071F1FF3400074D115 /* GA.png in Resources */,
@@ -2158,6 +2264,7 @@
 				FB39CF3A1F1FF3400074D115 /* KI.png in Resources */,
 				FB39CF4D1F1FF3400074D115 /* LV.png in Resources */,
 				FB39CF2C1F1FF3400074D115 /* IO.png in Resources */,
+				FB573C2C1F383D6600861F83 /* chime_done.wav in Resources */,
 				FB39CF371F1FF3400074D115 /* KE.png in Resources */,
 				FB39CFC91F1FF3400074D115 /* UY.png in Resources */,
 				FB39CEE71F1FF3400074D115 /* CZ.png in Resources */,
@@ -2407,6 +2514,7 @@
 				FB37ECA41F32B35800303409 /* ML.png in Resources */,
 				FB37ECA51F32B35800303409 /* MM.png in Resources */,
 				FB37ECA61F32B35800303409 /* MN.png in Resources */,
+				FBAF055A1F38F10B0022E4E2 /* GoogleService-Info.plist in Resources */,
 				FB37ECA71F32B35800303409 /* MO.png in Resources */,
 				FB37ECA81F32B35800303409 /* MP.png in Resources */,
 				FB37ECA91F32B35800303409 /* MQ.png in Resources */,
@@ -2471,6 +2579,7 @@
 				FB37ECE41F32B35800303409 /* SAMI.png in Resources */,
 				FB37ECE51F32B35800303409 /* SB.png in Resources */,
 				FB37ECE61F32B35800303409 /* SC.png in Resources */,
+				FB573C301F3840F800861F83 /* zap_down_quick.wav in Resources */,
 				FB37ECE71F32B35800303409 /* script.py in Resources */,
 				FB37ECE81F32B35800303409 /* SD.png in Resources */,
 				FB37ECE91F32B35900303409 /* SE.png in Resources */,
@@ -2505,6 +2614,7 @@
 				FB37ED061F32B35900303409 /* TM.png in Resources */,
 				FB37ED071F32B35900303409 /* TN.png in Resources */,
 				FB37ED081F32B35900303409 /* TO.png in Resources */,
+				FB573C2D1F383D6600861F83 /* chime_done.wav in Resources */,
 				FB37ED091F32B35900303409 /* TR.png in Resources */,
 				FB37ED0A1F32B35900303409 /* TT.png in Resources */,
 				FB37ED0B1F32B35900303409 /* TV.png in Resources */,
@@ -2565,18 +2675,260 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		FB1398F31F128F0A003F3BEC /* ShellScript */ = {
+		00FEDDAF5A37DDF68EBFC543 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
+			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "bash \"${BUILT_PRODUCTS_DIR}/${FRAMEWORKS_FOLDER_PATH}/Realm.framework/strip-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3581E667D13ED01BC6EFDF8C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SprekTests/Pods-SprekTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		449D02F070A16C1339BEB66D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek/Pods-Sprek-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		46723665AB9D87AB2C34720F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek MacUITests/Pods-Sprek MacUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		732EC15826D02AD097409FAB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		7C560DB9434CE956C4DDC636 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek MacTests/Pods-Sprek MacTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A8A66C2E34DDF01B4BDE154 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		8F44C00D18B82DF177711F00 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SprekTests/Pods-SprekTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A2C73FE7E05D9D7638A7164B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SprekUITests/Pods-SprekUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A589745BE1B9DC850948D395 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek/Pods-Sprek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADCC9B8CE83DF581D7454E4C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B0881B8793A68CE4CFB8559E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek MacUITests/Pods-Sprek MacUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B35E803C8AD0FB90FF620601 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B6DFF0A3676EBDB25AFB4D09 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek MacTests/Pods-Sprek MacTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B7C9D921ADC5E9000B1DBDDF /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SprekUITests/Pods-SprekUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC131ADFE9A1DAF817614588 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek Mac/Pods-Sprek Mac-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F320A57FD41D774F401E9E16 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		FB1398F41F12ACD6003F3BEC /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2591,6 +2943,21 @@
 			shellPath = /bin/sh;
 			shellScript = "./Fabric.framework/run a9fb732521ddd35550ed2801544bf03445b4e008 ac723569602f29fe555197e3082fddef716c4c1938eccd4dda62cb84eb266dd1";
 		};
+		FEEA0B07697D94E4845AA422 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Sprek Mac/Pods-Sprek Mac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -2600,6 +2967,7 @@
 			files = (
 				FBA1A6831F2B9B590007A636 /* Unit.swift in Sources */,
 				FB5F031F1F21783B00EAC3BA /* Course.swift in Sources */,
+				FB6FB0DE1F391257003B9BFF /* SettingsViewController.swift in Sources */,
 				FBFDED2B1F229EED00DD1E3D /* LangCell.swift in Sources */,
 				FBC2E3DE1F2E36AF00A2CB18 /* UnitTableViewController.swift in Sources */,
 				FBC2E3D81F2E296200A2CB18 /* TranslationExerciseViewController.swift in Sources */,
@@ -2613,14 +2981,18 @@
 				FBA1A6801F2B9B360007A636 /* UnitsTableViewController.swift in Sources */,
 				FBA1A6911F2BD5040007A636 /* TabController.swift in Sources */,
 				FBADFBF51F1FC78F0036B5A0 /* Colors.swift in Sources */,
+				FB6FB0DC1F39009C003B9BFF /* SignUpTableViewController.swift in Sources */,
+				FBF140D91F37995500B53C5B /* NoCardsViewController.swift in Sources */,
 				FB39CD671F1FF2020074D115 /* NewCourseViewController.swift in Sources */,
 				FBC2E3E61F2E893500A2CB18 /* HeaderTableViewCell.swift in Sources */,
 				FBA744851F30EF12009D4A4E /* Strength.swift in Sources */,
 				FBFF4BC21F2F8CEC00A4F52D /* NewCardViewController.swift in Sources */,
 				FBC2E3DA1F2E296E00A2CB18 /* VocabExerciseViewController.swift in Sources */,
 				FBB9C02B1F2EA158009A7CB5 /* CardTableViewCell.swift in Sources */,
+				FBF140DB1F37AF7400B53C5B /* WordsCollectionViewCell.swift in Sources */,
 				FBC2E3DC1F2E2E0B00A2CB18 /* SessionViewController.swift in Sources */,
 				FB2B67BD1EF96AE2003620E8 /* AppDelegate.swift in Sources */,
+				FBF140D71F37965400B53C5B /* SessionCompletedViewController.swift in Sources */,
 				FBA744831F30DE84009D4A4E /* HideableUIView.swift in Sources */,
 				FBA1A6851F2BC0E40007A636 /* Card.swift in Sources */,
 				FB96BC601F3228D7008860B8 /* ExerciseViewController.swift in Sources */,
@@ -2649,6 +3021,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB37EBEB1F32B32900303409 /* levenshtein.swift in Sources */,
+				FBA4B72C1F362C44007AFBE2 /* Colors.swift in Sources */,
 				FB37EBEC1F32B32900303409 /* Strength.swift in Sources */,
 				FB37EBED1F32B32900303409 /* Langs.swift in Sources */,
 				FB37EBEE1F32B32900303409 /* Course.swift in Sources */,
@@ -2825,33 +3198,36 @@
 		};
 		FB2B67E21EF96AE2003620E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D337A8B3CC9DE23B333ED99 /* Pods-Sprek.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A2KUJPLV68;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RealmiOS",
 				);
 				INFOPLIST_FILE = Sprek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eliyazdi.Sprek;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		FB2B67E31EF96AE2003620E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22BD968253558BBA72DAA1D5 /* Pods-Sprek.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A2KUJPLV68;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RealmiOS",
 				);
 				INFOPLIST_FILE = Sprek/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -2863,6 +3239,7 @@
 		};
 		FB2B67E51EF96AE2003620E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79C1EE131AAFB27B1221A552 /* Pods-SprekTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2878,6 +3255,7 @@
 		};
 		FB2B67E61EF96AE2003620E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 18BFDB2DC2D9A580590C242E /* Pods-SprekTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2893,6 +3271,7 @@
 		};
 		FB2B67E81EF96AE2003620E8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F77A550162B5BDF135A4A8B9 /* Pods-SprekUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3NBA9YL8AA;
@@ -2907,6 +3286,7 @@
 		};
 		FB2B67E91EF96AE2003620E8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2498EF4F9E2801936424902B /* Pods-SprekUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 3NBA9YL8AA;
@@ -2921,6 +3301,7 @@
 		};
 		FB37EBC71F32AF2C00303409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2955D8CACB8D106BFBBB5083 /* Pods-Sprek Mac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconMac;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -2929,7 +3310,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RealmMac",
 				);
 				INFOPLIST_FILE = "Sprek Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -2944,6 +3324,7 @@
 		};
 		FB37EBC81F32AF2C00303409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 930734EEF78A917D70F013B0 /* Pods-Sprek Mac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIconMac;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -2952,7 +3333,6 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
-					"$(PROJECT_DIR)/RealmMac",
 				);
 				INFOPLIST_FILE = "Sprek Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -2967,6 +3347,7 @@
 		};
 		FB37EBCA1F32AF2C00303409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E26EA4C379C8B2E92822EDE /* Pods-Sprek MacTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -2986,6 +3367,7 @@
 		};
 		FB37EBCB1F32AF2C00303409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BEB3808E6631E5EB4C7C797 /* Pods-Sprek MacTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -3005,6 +3387,7 @@
 		};
 		FB37EBCD1F32AF2C00303409 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A9D025CDB33204AEEBA1949 /* Pods-Sprek MacUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
@@ -3024,6 +3407,7 @@
 		};
 		FB37EBCE1F32AF2C00303409 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E5166D0FF74BB1D3738F9DA /* Pods-Sprek MacUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";

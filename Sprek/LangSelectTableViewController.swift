@@ -14,6 +14,8 @@ class LangSelectTableViewController: UITableViewController, UISearchBarDelegate 
     var filteredLangs = [Lang]()
     let searchController = UISearchController(searchResultsController: nil)
     
+    var delegate: SelectLangDelegate?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         langs = Langs().arr
@@ -84,6 +86,11 @@ class LangSelectTableViewController: UITableViewController, UISearchBarDelegate 
         cell.flagImage.image = UIImage(named: "\(lang.flag).png")
 
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.delegate?.selectLang(langs[indexPath.row].key)
+        self.navigationController?.popViewController(animated: true)
     }
  
 

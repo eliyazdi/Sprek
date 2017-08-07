@@ -2,7 +2,7 @@
 import Foundation
 
 class Levenshtein{
-    func levDis(_ w1: String, _ w2: String) -> Int {
+    static func levDis(_ w1: String, _ w2: String) -> Int {
         
         let (t, s) = (w1.characters, w2.characters)
         
