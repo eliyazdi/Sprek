@@ -16,7 +16,7 @@ class UnitsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: MyRealm.config)
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -68,7 +68,7 @@ class UnitsTableViewController: UITableViewController {
             }))
             alert.addAction(UIAlertAction(title: "Rename", style: .default, handler: { [weak alert] (_) in
                 let textField = alert?.textFields![0]
-                let realm = try! Realm()
+                let realm = try! Realm(configuration: MyRealm.config)
                 try! realm.write {
                     self.units?[indexPath.row].name = (textField?.text)!
                 }
@@ -94,7 +94,7 @@ class UnitsTableViewController: UITableViewController {
             let newUnit = Unit()
             newUnit.name = (textField?.text)!
             newUnit.course = self.course
-            let realm = try! Realm()
+            let realm = try! Realm(configuration: MyRealm.config)
             try! realm.write {
                 realm.add(newUnit)
             }

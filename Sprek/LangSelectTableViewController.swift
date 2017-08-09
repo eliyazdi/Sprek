@@ -89,7 +89,13 @@ class LangSelectTableViewController: UITableViewController, UISearchBarDelegate 
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.delegate?.selectLang(langs[indexPath.row].key)
+        let lang: Lang
+        if searchController.isActive && searchController.searchBar.text != "" {
+            lang = filteredLangs[indexPath.row]
+        } else {
+            lang = langs[indexPath.row]
+        }
+        self.delegate?.selectLang(lang.key)
         self.navigationController?.popViewController(animated: true)
     }
  

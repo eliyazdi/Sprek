@@ -678,8 +678,15 @@
 		FB573C301F3840F800861F83 /* zap_down_quick.wav in Resources */ = {isa = PBXBuildFile; fileRef = FB573C2E1F3840F800861F83 /* zap_down_quick.wav */; };
 		FB5F031F1F21783B00EAC3BA /* Course.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5F031E1F21783B00EAC3BA /* Course.swift */; };
 		FB5F03211F22674C00EAC3BA /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB5F03201F22674C00EAC3BA /* Icons.xcassets */; };
+		FB65E4F41F393BF700047714 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65E4F31F393BF700047714 /* Streak.swift */; };
+		FB65E4F51F393BF700047714 /* Streak.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65E4F31F393BF700047714 /* Streak.swift */; };
+		FB65E4FA1F3A11A600047714 /* MyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65E4F91F3A11A600047714 /* MyRealm.swift */; };
+		FB65E4FB1F3A11A600047714 /* MyRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65E4F91F3A11A600047714 /* MyRealm.swift */; };
+		FB65E4FD1F3A25C600047714 /* LogInTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB65E4FC1F3A25C600047714 /* LogInTableViewController.swift */; };
 		FB6FB0DC1F39009C003B9BFF /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB0DB1F39009C003B9BFF /* SignUpTableViewController.swift */; };
 		FB6FB0DE1F391257003B9BFF /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB0DD1F391257003B9BFF /* SettingsViewController.swift */; };
+		FB6FB0E01F391FA0003B9BFF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB0DF1F391FA0003B9BFF /* Activity.swift */; };
+		FB6FB0E11F391FA0003B9BFF /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB6FB0DF1F391FA0003B9BFF /* Activity.swift */; };
 		FB96BC601F3228D7008860B8 /* ExerciseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */; };
 		FBA1A67E1F2B9B0B0007A636 /* UnitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */; };
 		FBA1A6801F2B9B360007A636 /* UnitsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */; };
@@ -706,6 +713,7 @@
 		FBF140D71F37965400B53C5B /* SessionCompletedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF140D61F37965400B53C5B /* SessionCompletedViewController.swift */; };
 		FBF140D91F37995500B53C5B /* NoCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF140D81F37995500B53C5B /* NoCardsViewController.swift */; };
 		FBF140DB1F37AF7400B53C5B /* WordsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBF140DA1F37AF7400B53C5B /* WordsCollectionViewCell.swift */; };
+		FBFC24861F3B810700033428 /* MyCoursesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFC24851F3B810600033428 /* MyCoursesCell.swift */; };
 		FBFDED2B1F229EED00DD1E3D /* LangCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDED2A1F229EED00DD1E3D /* LangCell.swift */; };
 		FBFDED2D1F22A15600DD1E3D /* LangSelectTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFDED2C1F22A15600DD1E3D /* LangSelectTableViewController.swift */; };
 		FBFF4BC21F2F8CEC00A4F52D /* NewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBFF4BC11F2F8CEC00A4F52D /* NewCardViewController.swift */; };
@@ -1135,8 +1143,12 @@
 		FB573C2E1F3840F800861F83 /* zap_down_quick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = zap_down_quick.wav; sourceTree = "<group>"; };
 		FB5F031E1F21783B00EAC3BA /* Course.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Course.swift; sourceTree = "<group>"; };
 		FB5F03201F22674C00EAC3BA /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		FB65E4F31F393BF700047714 /* Streak.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Streak.swift; sourceTree = "<group>"; };
+		FB65E4F91F3A11A600047714 /* MyRealm.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyRealm.swift; sourceTree = "<group>"; };
+		FB65E4FC1F3A25C600047714 /* LogInTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogInTableViewController.swift; sourceTree = "<group>"; };
 		FB6FB0DB1F39009C003B9BFF /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		FB6FB0DD1F391257003B9BFF /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		FB6FB0DF1F391FA0003B9BFF /* Activity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		FB96BC5F1F3228D7008860B8 /* ExerciseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExerciseViewController.swift; sourceTree = "<group>"; };
 		FBA1A67D1F2B9B0B0007A636 /* UnitTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitTableViewCell.swift; sourceTree = "<group>"; };
 		FBA1A67F1F2B9B360007A636 /* UnitsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsTableViewController.swift; sourceTree = "<group>"; };
@@ -1162,6 +1174,7 @@
 		FBF140D61F37965400B53C5B /* SessionCompletedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionCompletedViewController.swift; sourceTree = "<group>"; };
 		FBF140D81F37995500B53C5B /* NoCardsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoCardsViewController.swift; sourceTree = "<group>"; };
 		FBF140DA1F37AF7400B53C5B /* WordsCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsCollectionViewCell.swift; sourceTree = "<group>"; };
+		FBFC24851F3B810600033428 /* MyCoursesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCoursesCell.swift; sourceTree = "<group>"; };
 		FBFDED2A1F229EED00DD1E3D /* LangCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangCell.swift; sourceTree = "<group>"; };
 		FBFDED2C1F22A15600DD1E3D /* LangSelectTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LangSelectTableViewController.swift; sourceTree = "<group>"; };
 		FBFF4BC11F2F8CEC00A4F52D /* NewCardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewCardViewController.swift; sourceTree = "<group>"; };
@@ -1345,6 +1358,8 @@
 				FB35D6711F203164006BA76E /* Langs.swift */,
 				FBA1A68E1F2BD2BD0007A636 /* Media.xcassets */,
 				FBA1A6811F2B9B470007A636 /* Realm Models */,
+				FB65E4F31F393BF700047714 /* Streak.swift */,
+				FB65E4F91F3A11A600047714 /* MyRealm.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -1353,7 +1368,7 @@
 			isa = PBXGroup;
 			children = (
 				FB37EBA61F32AF2B00303409 /* AppDelegate.swift */,
-				FB37EBA81F32AF2B00303409 /* ViewController.swift */,
+				FBFC24841F3B80E100033428 /* My Courses View */,
 				FBA4B72B1F362C44007AFBE2 /* Colors.swift */,
 				FB37EBAA1F32AF2B00303409 /* Assets.xcassets */,
 				FB37EBAC1F32AF2B00303409 /* Main.storyboard */,
@@ -1718,6 +1733,7 @@
 			children = (
 				FB6FB0DD1F391257003B9BFF /* SettingsViewController.swift */,
 				FB6FB0DB1F39009C003B9BFF /* SignUpTableViewController.swift */,
+				FB65E4FC1F3A25C600047714 /* LogInTableViewController.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -1751,6 +1767,7 @@
 				FB5F031E1F21783B00EAC3BA /* Course.swift */,
 				FBA1A6821F2B9B590007A636 /* Unit.swift */,
 				FBA1A6841F2BC0E40007A636 /* Card.swift */,
+				FB6FB0DF1F391FA0003B9BFF /* Activity.swift */,
 			);
 			name = "Realm Models";
 			path = Sprek;
@@ -1768,6 +1785,15 @@
 				FBF140D81F37995500B53C5B /* NoCardsViewController.swift */,
 			);
 			name = Session;
+			sourceTree = "<group>";
+		};
+		FBFC24841F3B80E100033428 /* My Courses View */ = {
+			isa = PBXGroup;
+			children = (
+				FB37EBA81F32AF2B00303409 /* ViewController.swift */,
+				FBFC24851F3B810600033428 /* MyCoursesCell.swift */,
+			);
+			name = "My Courses View";
 			sourceTree = "<group>";
 		};
 		FBFDED291F229A2D00DD1E3D /* Edit Course View */ = {
@@ -2972,8 +2998,10 @@
 				FBC2E3DE1F2E36AF00A2CB18 /* UnitTableViewController.swift in Sources */,
 				FBC2E3D81F2E296200A2CB18 /* TranslationExerciseViewController.swift in Sources */,
 				FBA744871F30F443009D4A4E /* levenshtein.swift in Sources */,
+				FB65E4FA1F3A11A600047714 /* MyRealm.swift in Sources */,
 				FB27FB561F2A795E0043EB07 /* MyCoursesTableViewController.swift in Sources */,
 				FBC2E3E21F2E864D00A2CB18 /* VocabWithLatinTableViewCell.swift in Sources */,
+				FB6FB0E01F391FA0003B9BFF /* Activity.swift in Sources */,
 				FBADFBF71F1FDA3A0036B5A0 /* CourseTableViewCell.swift in Sources */,
 				FBC2E3E41F2E865700A2CB18 /* SentenceTableViewCell.swift in Sources */,
 				FBFDED2D1F22A15600DD1E3D /* LangSelectTableViewController.swift in Sources */,
@@ -2985,8 +3013,10 @@
 				FBF140D91F37995500B53C5B /* NoCardsViewController.swift in Sources */,
 				FB39CD671F1FF2020074D115 /* NewCourseViewController.swift in Sources */,
 				FBC2E3E61F2E893500A2CB18 /* HeaderTableViewCell.swift in Sources */,
+				FB65E4F41F393BF700047714 /* Streak.swift in Sources */,
 				FBA744851F30EF12009D4A4E /* Strength.swift in Sources */,
 				FBFF4BC21F2F8CEC00A4F52D /* NewCardViewController.swift in Sources */,
+				FB65E4FD1F3A25C600047714 /* LogInTableViewController.swift in Sources */,
 				FBC2E3DA1F2E296E00A2CB18 /* VocabExerciseViewController.swift in Sources */,
 				FBB9C02B1F2EA158009A7CB5 /* CardTableViewCell.swift in Sources */,
 				FBF140DB1F37AF7400B53C5B /* WordsCollectionViewCell.swift in Sources */,
@@ -3020,15 +3050,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB6FB0E11F391FA0003B9BFF /* Activity.swift in Sources */,
 				FB37EBEB1F32B32900303409 /* levenshtein.swift in Sources */,
 				FBA4B72C1F362C44007AFBE2 /* Colors.swift in Sources */,
 				FB37EBEC1F32B32900303409 /* Strength.swift in Sources */,
 				FB37EBED1F32B32900303409 /* Langs.swift in Sources */,
 				FB37EBEE1F32B32900303409 /* Course.swift in Sources */,
+				FB65E4F51F393BF700047714 /* Streak.swift in Sources */,
+				FBFC24861F3B810700033428 /* MyCoursesCell.swift in Sources */,
 				FB37EBEF1F32B32900303409 /* Unit.swift in Sources */,
 				FB37EBF01F32B32900303409 /* Card.swift in Sources */,
 				FB37EBA91F32AF2B00303409 /* ViewController.swift in Sources */,
 				FB37EBA71F32AF2B00303409 /* AppDelegate.swift in Sources */,
+				FB65E4FB1F3A11A600047714 /* MyRealm.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

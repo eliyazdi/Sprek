@@ -14,6 +14,7 @@ class SignUpTableViewController: UITableViewController {
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var passwordConfirm: UITextField!
+    @IBOutlet weak var signUpButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,8 @@ class SignUpTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(signUp))
+        signUpButton.addTarget(self, action: #selector(signUp), for: .touchUpInside)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,17 +46,23 @@ class SignUpTableViewController: UITableViewController {
             }))
             self.present(alert, animated: true)
         }else{
+            signUpButton.setTitle("Loading...", for: .normal)
             let usernameCredentials = SyncCredentials.usernamePassword(username: usernameField.text!, password: passwordField.text!, register: true)
             let serverURL = URL(string: "http://45.55.220.254:9080")
             SyncUser.logIn(with: usernameCredentials, server: serverURL!){ user, error in
-                if user != nil{
-                    self.navigationController?.popViewController(animated: true)
-                }else if let error = error{
-                    let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
-                        
-                    }))
-                    self.present(alert, animated: true)
+                DispatchQueue.main.async {
+                    if user != nil{
+                        print("signed in")
+                        MyRealm.copyToSyncedRealm()
+                        self.navigationController?.popViewController(animated: true)
+                    }else if let error = error{
+                        self.signUpButton.setTitle("Sign up", for: .normal)
+                        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
+                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
+                            
+                        }))
+                        self.present(alert, animated: true)
+                    }
                 }
             }
         }

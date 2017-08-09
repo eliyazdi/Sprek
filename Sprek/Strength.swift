@@ -16,7 +16,7 @@ class Strength{
         self.init()
         switch strength{
         case 0:
-            self.emoji = "👍"
+            self.emoji = "✨"
         case 1:
             self.emoji = "😕"
         case 2:
@@ -28,7 +28,7 @@ class Strength{
         case 5:
             self.emoji = "👌"
         default:
-            self.emoji = "👍"
+            self.emoji = "✨"
         }
     }
 }

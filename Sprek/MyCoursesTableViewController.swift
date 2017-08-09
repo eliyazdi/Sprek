@@ -15,20 +15,8 @@ class MyCoursesTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: MyRealm.config)
         courses = realm.objects(Course.self)
-        var shortcutItems: [UIApplicationShortcutItem] = []
-        for course in (courses?.prefix(3))!{
-            let icon = UIApplicationShortcutIcon(type: .favorite)
-            let shortcutItem = UIApplicationShortcutItem(type: "openCourse", localizedTitle: course.name, localizedSubtitle: "Strength: 👍", icon: icon)
-            shortcutItems.append(shortcutItem)
-        }
-        let addIcon = UIApplicationShortcutIcon(type: .add)
-        let item = UIApplicationShortcutItem(type: "newCourse", localizedTitle: "New Course", localizedSubtitle: "", icon: addIcon)
-        shortcutItems.append(item)
-        UIApplication.shared.shortcutItems = shortcutItems
-        
-        
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = Colors().primary
@@ -50,7 +38,14 @@ class MyCoursesTableViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        let realm = try! Realm(configuration: MyRealm.config)
+        courses = realm.objects(Course.self)
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "🔥\(Streak.days)", style: .plain, target: self, action: #selector(openActivities))
         self.tableView.reloadData()
+    }
+    
+    func openActivities(){
+        
     }
 
     // MARK: - Table view data source
@@ -101,7 +96,10 @@ class MyCoursesTableViewController: UITableViewController {
         }
         deleteAction.backgroundColor = UIColor.red
         let editAction = UITableViewRowAction(style: .normal, title: "Edit"){ (rowAction, indexPath) in
-            print("Edited")
+            let editVC = self.storyboard?.instantiateViewController(withIdentifier: "editCourseVC") as! NewCourseViewController
+            editVC.forEditing = true
+            editVC.editCourse = self.courses?[indexPath.row]
+            self.navigationController?.pushViewController(editVC, animated: true)
         }
         editAction.backgroundColor = Colors().dark
         return [deleteAction, editAction]

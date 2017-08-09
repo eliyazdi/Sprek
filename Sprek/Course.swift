@@ -18,8 +18,12 @@ class Course: Object {
 //  }
     dynamic var name = ""
     dynamic var lang = ""
+    dynamic var id = UUID().uuidString
+    override static func primaryKey() -> String? {
+        return "id"
+    }
     func delete(){
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: MyRealm.config)
         let units = realm.objects(Unit.self).filter("course == %@", self)
         for unit in units{
             unit.delete()
@@ -31,7 +35,7 @@ class Course: Object {
     
     /// Returns the average strength of all units in a course
     var strength: Int{
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: MyRealm.config)
         let units = realm.objects(Unit.self).filter("course == %@", self)
         var strengths: [Int] = []
         for unit in units{

@@ -38,7 +38,7 @@ class VocabExerciseViewController: ExerciseViewController, UICollectionViewDeleg
         self.wordLabel.text = self.reversed ? self.card?.translation : self.card?.sentence
         self.delegate?.setInstructions("Select the correct translation")
         
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: MyRealm.config)
         let results = realm.objects(Card.self)
             .filter("isSentence == false AND unit.course == %@ AND sentence != %@", (self.card?.unit?.course)!, (self.card?.sentence)!)
         var shuffledWords = Array(results).prefix(5)

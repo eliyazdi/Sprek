@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import RealmSwift
 
 class SessionCompletedViewController: UIViewController {
 
@@ -18,6 +19,7 @@ class SessionCompletedViewController: UIViewController {
     
     var delegate: ExerciseDelegate?
     var points: Int?
+    var course: Course?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +31,17 @@ class SessionCompletedViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         self.delegate?.setInstructions("")
         if(points != nil){
+            let activity = Activity()
+            activity.date = Date()
+            activity.points = points!
+            activity.course = self.course
+            let realm = try! Realm(configuration: MyRealm.config)
+            try! realm.write{
+                realm.add(activity)
+            }
             let pointString = String(describing: points!)
             pointsLabel.text = "🏆 +\(pointString) points"
+            streakLabel.text = "🔥 \(Streak.days) day streak"
         }
     }
 

@@ -18,6 +18,9 @@ class NewCourseViewController: UITableViewController, SelectLangDelegate {
     
     var lang: String = ""
     
+    var forEditing: Bool? = false
+    var editCourse: Course?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.i
@@ -29,6 +32,23 @@ class NewCourseViewController: UITableViewController, SelectLangDelegate {
             langIcon.image = UIImage(named: "\(theLang[0].flag).png")
         }
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addCourse))
+        
+        if(forEditing! && editCourse != nil){
+            self.navigationItem.title = "Edit Course"
+            self.courseNameField.text = editCourse?.name
+            self.lang = (editCourse?.lang)!
+            let theLang = Langs().arr.filter { $0.key == self.lang }
+            langLabel.text = theLang[0].name
+            langLabel.textColor = UIColor.black
+            langIcon.image = UIImage(named: "\(theLang[0].flag).png")
+            
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneEditing))
+        }
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
     }
 
     override func didReceiveMemoryWarning() {
@@ -41,7 +61,7 @@ class NewCourseViewController: UITableViewController, SelectLangDelegate {
         myCourse.name = courseNameField.text!
         myCourse.lang = self.lang
         
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: MyRealm.config)
         
         try! realm.write{
             realm.add(myCourse)
@@ -51,6 +71,17 @@ class NewCourseViewController: UITableViewController, SelectLangDelegate {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let mainVC = storyboard.instantiateViewController(withIdentifier: "MyCoursesVC")
         self.navigationController?.pushViewController(mainVC, animated: true)
+    }
+    
+    func doneEditing(){
+        let realm = try! Realm(configuration: MyRealm.config)
+        
+        try! realm.write{
+            self.editCourse?.name = self.courseNameField.text!
+            self.editCourse?.lang = self.lang
+        }
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     func selectLang(_ lang: String) {

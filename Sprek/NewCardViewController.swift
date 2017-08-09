@@ -19,9 +19,11 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
     @IBOutlet weak var translationBox: UITextField!
     @IBOutlet weak var latinBox: UITextField!
     @IBOutlet weak var recordAudioButton: UIButton!
+    @IBOutlet weak var deleteAudioButton: UIButton!
     
-    var forEditing: Bool?
-    var forSentence: Bool?
+    var forEditing: Bool? = false
+    var editCard: Card?
+    var forSentence: Bool? = false
     var unit: Unit?
     var audio: Data? = nil
     override func viewDidLoad() {
@@ -54,17 +56,32 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
         
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addNewCard))
         
+        let stateStr = forEditing! ? "Edit" : "New"
+        
         if(forSentence!){
             targetBox.placeholder = "Sentence in target language"
             latinBox.placeholder = "Transliteration of sentence (optional)"
             translationBox.placeholder = "Translation of sentence"
-            self.navigationItem.title = "New Sentence"
+            self.navigationItem.title = "\(stateStr) Sentence"
             targetBox.autocapitalizationType = .sentences
             translationBox.autocapitalizationType = .sentences
             latinBox.autocapitalizationType = .sentences
         }else{
-            self.navigationItem.title = "New Word"
+            self.navigationItem.title = "\(stateStr) Word"
         }
+        
+        if(forEditing!){
+            targetBox.text = editCard?.sentence
+            translationBox.text = editCard?.translation
+            latinBox.text = editCard?.latin
+            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneEditing))
+        }
+        
+        if(audio != nil){
+            deleteAudioButton.isHidden = false
+        }
+        
+        deleteAudioButton.addTarget(self, action: #selector(deleteAudio), for: .touchUpInside)
         // Do any additional setup after loading the view.
     }
 
@@ -93,9 +110,28 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
             newCard.isSentence = self.forSentence!
             newCard.unit = self.unit!
             newCard.audio = self.audio
-            let realm = try! Realm()
+            let realm = try! Realm(configuration: MyRealm.config)
             try! realm.write{
                 realm.add(newCard)
+            }
+            self.navigationController?.popViewController(animated: true)
+        }
+    }
+    
+    func doneEditing(){
+        if(targetBox.text == "" || translationBox.text == ""){
+            let alert = UIAlertController(title: "Card incomplete", message: "Complete all required fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
+                self.dismiss(animated: true, completion: nil)
+            }))
+            self.present(alert, animated: true)
+        }else{
+            let realm = try! Realm(configuration: MyRealm.config)
+            try! realm.write{
+                editCard?.sentence = targetBox.text!
+                editCard?.translation = translationBox.text!
+                editCard?.latin = latinBox.text
+                editCard?.audio = self.audio
             }
             self.navigationController?.popViewController(animated: true)
         }
@@ -106,6 +142,7 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
             audioRecorder.stop()
             self.recordAudioButton.setTitle("Record audio", for: .normal)
             self.audio = try! Data(contentsOf: audioRecorder.url)
+            self.deleteAudioButton.isHidden = false
         }else{
             audioRecorder.record()
             self.recordAudioButton.setTitle("Stop recording", for: .normal)
@@ -116,6 +153,18 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
         let paths = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         let documentsDirectory = paths[0]
         return documentsDirectory
+    }
+    
+    func deleteAudio(){
+        let alert = UIAlertController(title: "Delete audio?", message: "", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { void in
+            self.audio = nil
+            self.deleteAudioButton.isHidden = true
+        }))
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { void in
+            
+        }))
+        self.present(alert, animated: true)
     }
     
 

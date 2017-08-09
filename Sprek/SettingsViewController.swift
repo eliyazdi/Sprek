@@ -19,7 +19,7 @@ class SettingsViewController: UITableViewController {
             ["loginCell", "signupCell"],
             ["infoCell"]
         ]
-        headers = ["Sync", "Info"]
+        headers = ["Sync (Beta)", "Info"]
 //        if(SyncUser.current == nil){
 //            
 //        }
@@ -31,8 +31,8 @@ class SettingsViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         if(SyncUser.current != nil){
             rows = [
                 ["signoutCell"],
@@ -75,6 +75,7 @@ class SettingsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if(rows[indexPath.section][indexPath.row] == "signoutCell"){
+//            MyRealm.copyFromSyncedRealm()
             SyncUser.current?.logOut()
             rows = [
                 ["loginCell", "signupCell"],

@@ -56,7 +56,7 @@ class SessionViewController: UIViewController, ExerciseDelegate {
     }
     
     func loadCards(){
-        let realm = try! Realm()
+        let realm = try! Realm(configuration: MyRealm.config)
         let myCardsRLM = realm.objects(Card.self)
             .filter("nextPractice <= %@ AND unit == %@", Date(), self.unit!)
             .sorted(byKeyPath: "nextPractice", ascending: false)
@@ -102,6 +102,7 @@ class SessionViewController: UIViewController, ExerciseDelegate {
             newVC.view.frame = containerView.bounds
             newVC.delegate = self
             newVC.points = self.correctCards
+            newVC.course = self.unit?.course
             containerView.addSubview(newVC.view)
         }else{
             let newCard = myCards[0]
