@@ -4,7 +4,7 @@ import Foundation
 class Levenshtein{
     static func levDis(_ w1: String, _ w2: String) -> Int {
         
-        let (t, s) = (w1, w2)
+        let (t, s) = (w1.characters, w2.characters)
         
         let empty = Array<Int>(repeating:0, count: s.count)
         var last = [Int](0...s.count)
