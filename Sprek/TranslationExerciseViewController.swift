@@ -65,7 +65,7 @@ class TranslationExerciseViewController: ExerciseViewController, UITextViewDeleg
         self.delegate?.setInstructions("Translate this text")
         self.sentenceLabel.text = self.reversed ? self.card?.translation : self.card?.sentence
         
-        if(((self.card?.latin?.characters.count)! > 0) && self.reversed == false){
+        if(((self.card?.latin?.count)! > 0) && self.reversed == false){
             self.showLatinButton.isHidden = false
         }else{
             self.showLatinButton.isHidden = true

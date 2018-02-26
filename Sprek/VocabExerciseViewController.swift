@@ -124,7 +124,7 @@ extension Results {
         if count > 1 {
             for i in 0..<(count - 1) {
                 let j = Int(arc4random_uniform(UInt32(count - i))) + Int(i)
-                swap(&array[i], &array[j])
+                array.swapAt(i, j)
             }
         }
         
@@ -143,7 +143,7 @@ extension MutableCollection where Indices.Iterator.Element == Index {
             guard d != 0 else { continue }
             let i = index(firstUnshuffled, offsetBy: d)
             if(firstUnshuffled != i){
-                swap(&self[firstUnshuffled], &self[i])
+                self.swapAt(firstUnshuffled, i)
             }
         }
     }
