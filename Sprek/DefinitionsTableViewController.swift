@@ -1,19 +1,20 @@
 //
-//  LogInTableViewController.swift
+//  DefinitionsTableViewController.swift
 //  Sprek
 //
-//  Created by Eli Yazdi on 8/8/17.
+//  Created by Eli Yazdi on 8/9/17.
 //  Copyright © 2017 Eli Yazdi. All rights reserved.
 //
 
 import UIKit
 import RealmSwift
 
-class LogInTableViewController: UITableViewController {
+class DefinitionsTableViewController: UITableViewController {
 
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
-    @IBOutlet weak var loginButton: UIButton!
+    var word: String?
+    var course: Course?
+    var defs: Results<Card>?
+    var type: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,68 +24,45 @@ class LogInTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        self.loginButton.addTarget(self, action: #selector(login), for: .touchUpInside)
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    @objc func login(){
-        if(emailField.text == "" || passwordField.text == ""){
-            let alert = UIAlertController(title: "Error", message: "Complete all required fields", preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
-                
-            }))
-            self.present(alert, animated: true)
-        }else{
-            loginButton.setTitle("Loading...", for: .normal)
-            let usernameCredentials = SyncCredentials.usernamePassword(username: emailField.text!, password: passwordField.text!, register: false)
-            let serverURL = URL(string: "http://45.55.220.254:9080")
-            
-            SyncUser.logIn(with: usernameCredentials, server: serverURL!){ user, error in
-                DispatchQueue.main.async {
-                    if let error = error{
-                        self.loginButton.setTitle("Log in", for: .normal)
-                        let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
-                        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
-                            
-                        }))
-                        self.present(alert, animated: true)
-                    }else if user != nil{
-                        print("signed in")
-                        MyRealm.copyToSyncedRealm()
-                        self.navigationController?.popViewController(animated: true)
-                    }
-                }
-            }
-        }
-    }
 
-    
-    /*
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return (defs?.count)!
     }
-    */
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 30
+    }
 
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "word", for: indexPath)
+        let cellWord: String
+        if(self.type == "sentence"){
+            cellWord = (self.defs?[indexPath.row].translation)!
+        }else{
+            cellWord = (self.defs?[indexPath.row].sentence)!
+        }
+//        print(cellWord)
+        cell.textLabel?.text = cellWord
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

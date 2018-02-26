@@ -16,11 +16,11 @@ class Activity: Object {
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
-    dynamic var date = Date()
-    dynamic var points = 0
-    dynamic var course: Course?
+    @objc dynamic var date = Date()
+    @objc dynamic var points = 0
+    @objc dynamic var course: Course?
     
-    dynamic var id = UUID().uuidString
+    @objc dynamic var id = UUID().uuidString
     override static func primaryKey() -> String? {
         return "id"
     }

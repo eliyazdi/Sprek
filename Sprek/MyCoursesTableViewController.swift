@@ -20,16 +20,26 @@ class MyCoursesTableViewController: UITableViewController {
         
         self.navigationController?.navigationBar.isTranslucent = false
         self.navigationController?.navigationBar.barTintColor = Colors().primary
-        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedStringKey.foregroundColor : UIColor.white]
         self.navigationController?.navigationBar.tintColor = UIColor.white
         
-        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 10, right: 0)
+        self.tableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+//        
+//        self.view.backgroundColor = .white
+//        let blurEffect = UIBlurEffect(style: .extraLight)
+//        let blurView = UIVisualEffectView(effect: blurEffect)
+//        blurView.frame = self.view.frame
+        
+//        self.tableView.backgroundView = blurView
+//        self.view.addSubview(blurView)
+        
+//        self.tableView.separatorEffect = UIVibrancyEffect(blurEffect: blurEffect)
     }
 
     override func didReceiveMemoryWarning() {
@@ -44,7 +54,7 @@ class MyCoursesTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    func openActivities(){
+    @objc func openActivities(){
         
     }
 
@@ -59,6 +69,15 @@ class MyCoursesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return courses!.count
     }
+    
+//    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 20
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "seperatorCell")
+//        return cell?.contentView
+//    }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -67,10 +86,13 @@ class MyCoursesTableViewController: UITableViewController {
         // Configure the cell...
         let course = courses![indexPath.row]
         let lang = Langs().arr.filter { $0.key == course.lang }
-        cell.FlagImage.image = UIImage(named: "\(lang[0].flag).png")
+        if(lang.count > 0){
+            cell.FlagImage.image = UIImage(named: "\(lang[0].flag).png")
+        }
         cell.TitleLabel.text = course.name
         let strength = Strength(emojiFrom: course.strength).emoji
         cell.StrengthLabel.text = "Strength: \(strength!)"
+//        cell.layer.cornerRadius = 20
 
         return cell
     }
@@ -151,7 +173,7 @@ class MyCoursesTableViewController: UITableViewController {
             if segue.identifier == "toUnitsView" {
                 if let indexPath = tableView.indexPath(for: cell) {
                     let candy = courses?[indexPath.row]
-                    let controller = segue.destination as! UnitsTableViewController
+                    let controller = segue.destination as! UnitsViewController
                     controller.course = candy
                     controller.navigationItem.title = candy!.name
                     controller.navigationItem.leftItemsSupplementBackButton = true

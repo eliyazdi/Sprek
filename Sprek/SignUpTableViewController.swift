@@ -32,7 +32,7 @@ class SignUpTableViewController: UITableViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func signUp(){
+    @objc func signUp(){
         if(usernameField.text == "" || passwordField.text == "" || passwordConfirm.text == ""){
             let alert = UIAlertController(title: "Error", message: "Complete all required fields", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
@@ -51,17 +51,17 @@ class SignUpTableViewController: UITableViewController {
             let serverURL = URL(string: "http://45.55.220.254:9080")
             SyncUser.logIn(with: usernameCredentials, server: serverURL!){ user, error in
                 DispatchQueue.main.async {
-                    if user != nil{
-                        print("signed in")
-                        MyRealm.copyToSyncedRealm()
-                        self.navigationController?.popViewController(animated: true)
-                    }else if let error = error{
+                    if let error = error{
                         self.signUpButton.setTitle("Sign up", for: .normal)
                         let alert = UIAlertController(title: "Error", message: error.localizedDescription, preferredStyle: .alert)
                         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
                             
                         }))
                         self.present(alert, animated: true)
+                    }else if user != nil{
+                        print("signed in")
+                        MyRealm.copyToSyncedRealm()
+                        self.navigationController?.popViewController(animated: true)
                     }
                 }
             }

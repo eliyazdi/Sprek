@@ -16,10 +16,10 @@ class Unit: Object {
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
-    dynamic var name = ""
-    dynamic var course: Course?
+    @objc dynamic var name = ""
+    @objc dynamic var course: Course?
     
-    dynamic var id = UUID().uuidString
+    @objc dynamic var id = UUID().uuidString
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -40,7 +40,7 @@ class Unit: Object {
         let cards = realm.objects(Card.self).filter("unit == %@", self)
         var strengths: [Int] = []
         for card in cards{
-            strengths.append(card.strength)
+            strengths.append(card.calcStrength)
         }
         return strengths.roundAverage
     }

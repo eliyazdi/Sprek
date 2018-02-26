@@ -32,11 +32,17 @@ class ExerciseViewController: UIViewController {
         return arc4random_uniform(2) == 0
     }
     
+    func checkAnswer(){
+        
+    }
+    
     func playAudio(){
         if(self.card?.audio != nil){
-            player = try! AVAudioPlayer(data: (self.card?.audio)!)
+            self.player = try! AVAudioPlayer(data: (self.card?.audio)!)
             player?.volume = 1.0
             player?.play()
+        }else if(AudioOrTTS(for: self.card!).hasTTS){
+            AudioOrTTS(for: self.card!).playTTS()
         }
     }
     

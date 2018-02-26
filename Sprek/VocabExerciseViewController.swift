@@ -9,7 +9,7 @@
 import UIKit
 import RealmSwift
 
-class VocabExerciseViewController: ExerciseViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class VocabExerciseViewController: ExerciseViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
 
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var wordCollection: UICollectionView!
@@ -63,9 +63,10 @@ class VocabExerciseViewController: ExerciseViewController, UICollectionViewDeleg
         cell.layer.borderColor = UIColor.primary.cgColor
         cell.layer.borderWidth = 0.5
         cell.layer.cornerRadius = 5
+        
         return cell
     }
-    
+
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell = collectionView.cellForItem(at: indexPath) as! WordsCollectionViewCell
@@ -83,7 +84,24 @@ class VocabExerciseViewController: ExerciseViewController, UICollectionViewDeleg
         cell.layer.borderWidth = 0.5
     }
     
-    func checkAnswer(){
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        let str: String = self.reversed ? wordsList[indexPath.item].sentence : wordsList[indexPath.item].translation
+//        var size = str.size(attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 17)])
+//        size.height += 10
+//        size.width += 20
+        let size = CGSize(width: (self.wordCollection.frame.width - 10), height: 40)
+        return size
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 5)
+    }
+    
+    override func checkAnswer(){
         if(selectedWord == self.card){
             self.card?.answer(isCorrect: true)
             self.delegate?.answered(correctly: true, correctAnswer: nil)
@@ -124,7 +142,7 @@ extension Results {
         if count > 1 {
             for i in 0..<(count - 1) {
                 let j = Int(arc4random_uniform(UInt32(count - i))) + Int(i)
-                swap(&array[i], &array[j])
+                array.swapAt(i, j)
             }
         }
         
@@ -143,7 +161,7 @@ extension MutableCollection where Indices.Iterator.Element == Index {
             guard d != 0 else { continue }
             let i = index(firstUnshuffled, offsetBy: d)
             if(firstUnshuffled != i){
-                swap(&self[firstUnshuffled], &self[i])
+                self.swapAt(firstUnshuffled, i)
             }
         }
     }

@@ -8,11 +8,14 @@
 
 import UIKit
 import RealmSwift
+//import GoogleMobileAds
 
-class UnitsTableViewController: UITableViewController {
+class UnitsViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var course: Course?
     var units: Results<Unit>?
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var adBox: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +25,34 @@ class UnitsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        tableView.delegate = self
+        tableView.dataSource = self
         units = realm.objects(Unit.self).filter("course == %@", course!)
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(newUnit))
+//        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(newUnit))
+        self.navigationItem.rightBarButtonItems = [
+            UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.add, target: self, action: #selector(newUnit)),
+            UIBarButtonItem(barButtonSystemItem: .play, target: self, action: #selector(studySession))
+        ]
+//        let adView = GADBannerView()
+//        adView.adUnitID = Keys.MainBannerAdUnit
+//        adView.rootViewController = self
+//        let request = GADRequest()
+//        request.testDevices = Keys.AdTestDevices
+//        adView.load(request)
+//        adView.frame = adBox.frame
+//        adBox.addSubview(adView)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.tableView.reloadData()
+    }
+    
+    @objc func studySession(){
+        let newVC = self.storyboard?.instantiateViewController(withIdentifier: "sessionViewController") as! SessionViewController
+        newVC.course = self.course
+        newVC.forCourse = true
+        self.present(newVC, animated: true)
     }
 
     override func didReceiveMemoryWarning() {
@@ -33,17 +62,17 @@ class UnitsTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return (units?.count)!
     }
     
-    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
             let alert = UIAlertController(title: "Delete course?", message: "", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
@@ -80,7 +109,7 @@ class UnitsTableViewController: UITableViewController {
         return [deleteAction, editAction]
     }
     
-    func newUnit(){
+    @objc func newUnit(){
         let alert = UIAlertController(title: "New Unit", message: "Create a new unit", preferredStyle: .alert)
         alert.addTextField { (textField) in
             textField.placeholder = "Unit name"
@@ -104,7 +133,7 @@ class UnitsTableViewController: UITableViewController {
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "unitCell", for: indexPath) as! UnitTableViewCell
 
         // Configure the cell...

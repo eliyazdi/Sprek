@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import AVFoundation
+import Crashlytics
 
 class SessionViewController: UIViewController, ExerciseDelegate {
 
@@ -24,6 +25,7 @@ class SessionViewController: UIViewController, ExerciseDelegate {
     var completedCards: Int = 0
     var correctCards: Int = 0
     var player: AVAudioPlayer?
+    var forCourse: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,13 +55,22 @@ class SessionViewController: UIViewController, ExerciseDelegate {
         self.correctAnswerLabel.numberOfLines = 3
         self.correctAnswerLabel.lineBreakMode = .byWordWrapping
         self.correctAnswerLabel.sizeToFit()
+        
+        Answers.logLevelStart("Session", customAttributes: nil)
     }
     
     func loadCards(){
         let realm = try! Realm(configuration: MyRealm.config)
-        let myCardsRLM = realm.objects(Card.self)
-            .filter("nextPractice <= %@ AND unit == %@", Date(), self.unit!)
-            .sorted(byKeyPath: "nextPractice", ascending: false)
+        let myCardsRLM: Results<Card>
+        if(self.forCourse){
+            myCardsRLM = realm.objects(Card.self)
+                .filter("nextPractice <= %@ AND unit.course == %@", Date(), self.course!)
+                .sorted(byKeyPath: "nextPractice", ascending: false)
+        }else{
+            myCardsRLM = realm.objects(Card.self)
+                .filter("nextPractice <= %@ AND unit == %@", Date(), self.unit!)
+                .sorted(byKeyPath: "nextPractice", ascending: false)
+        }
         
         var myCards = Array(myCardsRLM)
             .prefix(10 - completedCards)
@@ -102,7 +113,11 @@ class SessionViewController: UIViewController, ExerciseDelegate {
             newVC.view.frame = containerView.bounds
             newVC.delegate = self
             newVC.points = self.correctCards
-            newVC.course = self.unit?.course
+            if(self.course != nil){
+                newVC.course = self.course
+            }else{
+                newVC.course = self.unit?.course
+            }
             containerView.addSubview(newVC.view)
         }else{
             let newCard = myCards[0]
@@ -127,7 +142,7 @@ class SessionViewController: UIViewController, ExerciseDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func popBack(){
+    @objc func popBack(){
         let alert = UIAlertController(title: "End Session?", message: "Are you sure you want to end this study session?", preferredStyle: .alert)
         
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in

@@ -36,7 +36,7 @@ class MyRealm{
                     syncedRealm.create(Course.self, value: course, update: true)
                 }
             }
-    
+            
             let localUnits = localRealm.objects(Unit.self)
             for unit in localUnits{
                 try! syncedRealm.write {

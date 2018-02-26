@@ -16,18 +16,116 @@ class Card: Object {
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
-    dynamic var isSentence = false
-    dynamic var sentence = ""
-    dynamic var translation = ""
-    dynamic var strength: Int = 0
-    dynamic var latin: String? = nil
-    dynamic var audio: Data?
-    dynamic var unit: Unit?
-    dynamic var nextPractice: Date? = Date()
+    @objc dynamic var isSentence = false
+    @objc dynamic var sentence = ""
+    @objc dynamic var translation = ""
+    @objc dynamic var strength: Int = 0
+    @objc dynamic var latin: String? = nil
+    @objc dynamic var audio: Data?
+    @objc dynamic var unit: Unit?
+    @objc dynamic var nextPractice: Date? = Date()
     
-    dynamic var id = UUID().uuidString
+    @objc dynamic var id = UUID().uuidString
     override static func primaryKey() -> String? {
         return "id"
+    }
+    
+    var calcStrength: Int{
+        get{
+            let hoursSinceLastPracticeDue = Date().hours(from: self.nextPractice!)
+            if(hoursSinceLastPracticeDue < 12){
+                switch self.strength{
+                case 1:
+                    return 3
+                case 2:
+                    return 4
+                case 3:
+                    return 4
+                case 4:
+                    return 4
+                case 5:
+                    return 5
+                default:
+                    return 0
+                }
+            }else if(hoursSinceLastPracticeDue < 24){
+                switch self.strength{
+                case 1:
+                    return 3
+                case 2:
+                    return 3
+                case 3:
+                    return 3
+                case 4:
+                    return 4
+                case 5:
+                    return 5
+                default:
+                    return 0
+                }
+            }else if(hoursSinceLastPracticeDue < 48){
+                switch self.strength{
+                case 1:
+                    return 2
+                case 2:
+                    return 2
+                case 3:
+                    return 3
+                case 4:
+                    return 4
+                case 5:
+                    return 5
+                default:
+                    return 0
+                }
+            }
+            else if(hoursSinceLastPracticeDue < 48){
+                switch self.strength{
+                case 1:
+                    return 1
+                case 2:
+                    return 1
+                case 3:
+                    return 2
+                case 4:
+                    return 4
+                case 5:
+                    return 5
+                default:
+                    return 0
+                }
+            }else if(hoursSinceLastPracticeDue < 72){
+                switch self.strength{
+                case 1:
+                    return 1
+                case 2:
+                    return 1
+                case 3:
+                    return 1
+                case 4:
+                    return 3
+                case 5:
+                    return 4
+                default:
+                    return 0
+                }
+            }else{
+                switch self.strength{
+                case 1:
+                    return 1
+                case 2:
+                    return 1
+                case 3:
+                    return 1
+                case 4:
+                    return 2
+                case 5:
+                    return 3
+                default:
+                    return 0
+                }
+            }
+        }
     }
     
     func answer(isCorrect correct: Bool){

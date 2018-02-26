@@ -23,9 +23,8 @@ class UnitTableViewController: UITableViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+//        self.loadData()
         let realm = try! Realm(configuration: MyRealm.config)
-        vocabData = realm.objects(Card.self).filter("isSentence == false && unit == %@", unit!)
-        sentenceData = realm.objects(Card.self).filter("isSentence == true && unit == %@", unit!)
         data = [
             realm.objects(Card.self).filter("isSentence == false && unit == %@", unit!),
             realm.objects(Card.self).filter("isSentence == true && unit == %@", unit!)
@@ -40,13 +39,20 @@ class UnitTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
     
+    func loadData(){
+        let realm = try! Realm(configuration: MyRealm.config)
+        self.vocabData = realm.objects(Card.self).filter("isSentence == false && unit == %@", unit!)
+        self.sentenceData = realm.objects(Card.self).filter("isSentence == true && unit == %@", unit!)
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+//        self.loadData() 
         self.tableView.reloadData()
     }
     
     
-    func studySession(){
+    @objc func studySession(){
         let newVC = self.storyboard?.instantiateViewController(withIdentifier: "sessionViewController") as! SessionViewController
         newVC.unit = self.unit
         self.present(newVC, animated: true)
@@ -65,35 +71,39 @@ class UnitTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let alert = UIAlertController(title: "Delete card?", message: "", preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: { (_) in
-            self.dismiss(animated: true, completion: nil)
-        }))
-        alert.addAction(UIAlertAction(title: "Delete", style: .destructive, handler: { (_) in
-            let realm = try! Realm(configuration: MyRealm.config)
-            if(indexPath.section == 0){
-                try! realm.write {
-                    realm.delete((self.vocabData?[indexPath.row])!)
-                }
-            }else{
-                try! realm.write {
-                    realm.delete((self.sentenceData?[indexPath.row])!)
-                }
-            }
-            self.tableView.reloadData()
-        }))
-        let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
-            self.present(alert, animated: true)
-        }
-        deleteAction.backgroundColor = UIColor.red
+        
+//        let deleteAction = UITableViewRowAction(style: .normal, title: "Delete") { (rowAction, indexPath) in
+//            let alert = UIAlertController(title: "Delete card?", message: "", preferredStyle: .alert)
+//            alert.addAction(
+//                UIAlertAction(
+//                    title: "Cancel",
+//                    style: .cancel) { (_) in
+//                        self.dismiss(animated: true, completion: nil)
+//            })
+//            alert.addAction(
+//                UIAlertAction(
+//                    title: "Delete",
+//                    style: .destructive) { (_) in
+//                        let realm = try! Realm(configuration: MyRealm.config)
+//                        try! realm.write {
+//                            realm.delete(self.data[indexPath.section][indexPath.row])
+//                        }
+//                        DispatchQueue.main.async {
+//                            self.data = [
+//                                realm.objects(Card.self).filter("isSentence == false && unit == %@", self.unit!),
+//                                realm.objects(Card.self).filter("isSentence == true && unit == %@", self.unit!)
+//                            ]
+//                            self.tableView.reloadData()
+//                            self.tableView.deleteRows(at: [indexPath], with: .left)
+//                        }
+//
+//            })
+//            self.present(alert, animated: true)
+//        }
+//        deleteAction.backgroundColor = UIColor.red
         let editAction = UITableViewRowAction(style: .normal, title: "Edit"){ (rowAction, indexPath) in
             //TODO: Fix this
-            let card: Card
-            if(indexPath.section == 0){
-                card = (self.vocabData?[indexPath.row])!
-            }else{
-                card = (self.sentenceData?[indexPath.row])!
-            }
+            let card: Card = self.data[indexPath.section][indexPath.row]
             let editVC = self.storyboard?.instantiateViewController(withIdentifier: "newCardView") as! NewCardViewController
             editVC.forEditing = true
             editVC.editCard = card
@@ -102,7 +112,7 @@ class UnitTableViewController: UITableViewController {
             self.navigationController?.pushViewController(editVC, animated: true)
         }
         editAction.backgroundColor = Colors().dark
-        return [deleteAction, editAction]
+        return [editAction]
     }
 
     
@@ -130,12 +140,10 @@ class UnitTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         var cell: CardTableViewCell
-        let card: Card
-        if(indexPath.section == 0){
-            card = (vocabData?[indexPath.row])!
+        let card = self.data[indexPath.section][indexPath.row]
+        if(card.isSentence == false){
             cell = tableView.dequeueReusableCell(withIdentifier: "vocabCellWithLatin", for: indexPath) as! VocabWithLatinTableViewCell
         }else{
-            card = (sentenceData?[indexPath.row])!
             cell = tableView.dequeueReusableCell(withIdentifier: "sentenceCell", for: indexPath) as! SentenceTableViewCell
         }
         cell.card = card

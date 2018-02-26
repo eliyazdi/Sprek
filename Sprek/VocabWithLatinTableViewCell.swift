@@ -25,9 +25,8 @@ class VocabWithLatinTableViewCell: CardTableViewCell {
         targetWordLabel.text = self.card.sentence
         translationWordLabel.text = self.card.translation
         latinLabel.text = self.card.latin
-        strengthLabel.text = Strength(emojiFrom: self.card.strength).emoji
-        if(self.card.audio == nil){
-//            self.playButton.isHidden = true
+        strengthLabel.text = Strength(emojiFrom: self.card.calcStrength).emoji
+        if(!AudioOrTTS(for: self.card).exists){
             self.playButton.isHidden = true
         }else{
             self.playButton.addTarget(self, action: #selector(playAudio), for: .touchUpInside)

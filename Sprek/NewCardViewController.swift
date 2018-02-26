@@ -74,7 +74,10 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
             targetBox.text = editCard?.sentence
             translationBox.text = editCard?.translation
             latinBox.text = editCard?.latin
-            self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneEditing))
+            self.navigationItem.rightBarButtonItems = [
+                UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(doneEditing)),
+                UIBarButtonItem(barButtonSystemItem: .trash, target: self, action: #selector(deleteCard))
+            ]
         }
         
         if(audio != nil){
@@ -83,6 +86,28 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
         
         deleteAudioButton.addTarget(self, action: #selector(deleteAudio), for: .touchUpInside)
         // Do any additional setup after loading the view.
+    }
+    
+    @objc func deleteCard(){
+        if let card = self.editCard{
+            let alert = UIAlertController(title: "Delete card?", message: "", preferredStyle: .alert)
+            alert.addAction(
+                UIAlertAction(
+                    title: "Cancel",
+                    style: .cancel) { (_) in
+                })
+            alert.addAction(
+                UIAlertAction(
+                    title: "Delete",
+                    style: .destructive) { (_) in
+                        let realm = try! Realm(configuration: MyRealm.config)
+                        try! realm.write {
+                            realm.delete(card)
+                        }
+                        self.navigationController?.popViewController(animated: true)
+                    })
+            self.present(alert, animated: true)
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -95,7 +120,7 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
         return false
     }
     
-    func addNewCard(){
+    @objc func addNewCard(){
         if(targetBox.text == "" || translationBox.text == ""){
             let alert = UIAlertController(title: "Card incomplete", message: "Complete all required fields", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
@@ -110,6 +135,7 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
             newCard.isSentence = self.forSentence!
             newCard.unit = self.unit!
             newCard.audio = self.audio
+            print("here4")
             let realm = try! Realm(configuration: MyRealm.config)
             try! realm.write{
                 realm.add(newCard)
@@ -118,7 +144,7 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
         }
     }
     
-    func doneEditing(){
+    @objc func doneEditing(){
         if(targetBox.text == "" || translationBox.text == ""){
             let alert = UIAlertController(title: "Card incomplete", message: "Complete all required fields", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: { void in
@@ -137,7 +163,7 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
         }
     }
     
-    func record(){
+    @objc func record(){
         if(audioRecorder.isRecording){
             audioRecorder.stop()
             self.recordAudioButton.setTitle("Record audio", for: .normal)
@@ -155,7 +181,7 @@ class NewCardViewController: UITableViewController, UITextFieldDelegate, AVAudio
         return documentsDirectory
     }
     
-    func deleteAudio(){
+    @objc func deleteAudio(){
         let alert = UIAlertController(title: "Delete audio?", message: "", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .destructive, handler: { void in
             self.audio = nil

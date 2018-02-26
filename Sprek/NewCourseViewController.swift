@@ -56,32 +56,43 @@ class NewCourseViewController: UITableViewController, SelectLangDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func addCourse(){
-        let myCourse = Course()
-        myCourse.name = courseNameField.text!
-        myCourse.lang = self.lang
-        
-        let realm = try! Realm(configuration: MyRealm.config)
-        
-        try! realm.write{
-            realm.add(myCourse)
+    @objc func addCourse(){
+        if(self.courseNameField.text == "" || self.lang == ""){
+            let alert = UIAlertController(title: "Fields incomplete", message: "Complete all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }else{
+            let myCourse = Course()
+            myCourse.name = courseNameField.text!
+            myCourse.lang = self.lang
+            
+            let realm = try! Realm(configuration: MyRealm.config)
+            
+            try! realm.write{
+                realm.add(myCourse)
+            }
+            
+            
+            self.navigationController?.popViewController(animated: true)
         }
-        
-        
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let mainVC = storyboard.instantiateViewController(withIdentifier: "MyCoursesVC")
-        self.navigationController?.pushViewController(mainVC, animated: true)
     }
     
-    func doneEditing(){
-        let realm = try! Realm(configuration: MyRealm.config)
-        
-        try! realm.write{
-            self.editCourse?.name = self.courseNameField.text!
-            self.editCourse?.lang = self.lang
+    @objc func doneEditing(){
+        if(self.courseNameField.text == "" || self.lang == ""){
+            let alert = UIAlertController(title: "Fields incomplete", message: "Complete all fields", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+            self.present(alert, animated: true)
+        }else{
+            let realm = try! Realm(configuration: MyRealm.config)
+            
+            try! realm.write{
+                self.editCourse?.name = self.courseNameField.text!
+                self.editCourse?.lang = self.lang
+            }
+            
+            self.navigationController?.popViewController(animated: true)
         }
         
-        self.navigationController?.popViewController(animated: true)
     }
     
     func selectLang(_ lang: String) {

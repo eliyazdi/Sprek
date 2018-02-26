@@ -14,7 +14,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     @IBOutlet weak var myCoursesTable: NSTableView!
     @IBOutlet weak var myCoursesScrollView: NSScrollView!
     @IBOutlet weak var streakLabel: NSTextField!
-    @IBOutlet weak var touchBarStreakLabel: NSTextField!
     
     var myCourses: Results<Course>?
 
@@ -27,7 +26,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         let realm = try! Realm(configuration: MyRealm.config)
         
         myCourses = realm.objects(Course.self)
-        
         myCoursesTable.reloadData()
         // Do any additional setup after loading the view.
     }
@@ -35,7 +33,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     override func viewDidAppear() {
         super.viewDidAppear()
         self.view.window!.title = "Sprek"
-        self.view.window?.minSize = NSSize(width: 400, height: 300)
+        self.view.window?.minSize = NSSize(width: 550, height: 300)
         self.view.window?.titlebarAppearsTransparent = true
         self.view.window?.titleVisibility = .hidden
         self.view.window?.isOpaque = false
@@ -51,7 +49,7 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         self.streakLabel.stringValue = "🔥\(Streak.days)"
         
         if #available(OSX 10.12.2, *) {
-            self.touchBarStreakLabel.stringValue = "🔥\(Streak.days)"
+//            self.touchBarStreakLabel.stringValue = "🔥\(Streak.days)"
         } else {
             // Fallback on earlier versions
         }

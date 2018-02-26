@@ -24,11 +24,13 @@ class CardTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func playAudio(){
-        if self.card.audio != nil{
-            audioPlayer = try! AVAudioPlayer(data: self.card.audio!)
-            audioPlayer.volume = 1.0
-            audioPlayer.play()
+    @objc func playAudio(){
+        if(self.card.audio != nil){
+            self.audioPlayer = try! AVAudioPlayer(data: (self.card.audio)!)
+            audioPlayer?.volume = 1.0
+            audioPlayer?.play()
+        }else if(AudioOrTTS(for: self.card).hasTTS){
+            AudioOrTTS(for: self.card).playTTS()
         }
     }
 

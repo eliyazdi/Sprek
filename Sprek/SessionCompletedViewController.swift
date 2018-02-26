@@ -8,6 +8,9 @@
 
 import UIKit
 import RealmSwift
+import Fabric
+import Crashlytics
+//import GoogleMobileAds
 
 class SessionCompletedViewController: UIViewController {
 
@@ -16,6 +19,7 @@ class SessionCompletedViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     @IBOutlet weak var pointsLabel: UILabel!
     @IBOutlet weak var streakLabel: UILabel!
+//    @IBOutlet weak var adView: GADNativeExpressAdView!
     
     var delegate: ExerciseDelegate?
     var points: Int?
@@ -26,6 +30,14 @@ class SessionCompletedViewController: UIViewController {
         self.doneButton.layer.cornerRadius = 20
         self.doneButton.addTarget(self, action: #selector(done), for: .touchUpInside)
         // Do any additional setup after loading the view.
+        
+//        adView.delegate = self
+//        adView.rootViewController = self
+//        adView.adUnitID = "ca-app-pub-2708057265822519/1635655462"
+//        
+//        let request = GADRequest()
+//        request.testDevices = Keys.AdTestDevices
+//        adView.load(request)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -42,6 +54,7 @@ class SessionCompletedViewController: UIViewController {
             let pointString = String(describing: points!)
             pointsLabel.text = "🏆 +\(pointString) points"
             streakLabel.text = "🔥 \(Streak.days) day streak"
+            Answers.logLevelEnd("Session", score: NSNumber(integerLiteral: points!), success: true, customAttributes: nil)
         }
     }
 
@@ -50,7 +63,7 @@ class SessionCompletedViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func done(){
+    @objc func done(){
         self.delegate?.dismissSession()
     }
     

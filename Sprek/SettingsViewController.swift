@@ -17,9 +17,10 @@ class SettingsViewController: UITableViewController {
         super.viewDidLoad()
         rows = [
             ["loginCell", "signupCell"],
+//            ["removeAdsCell", "forvoCell"],
             ["infoCell"]
         ]
-        headers = ["Sync (Beta)", "Info"]
+        headers = ["Sync", "", "Info"]
 //        if(SyncUser.current == nil){
 //            
 //        }
@@ -36,11 +37,13 @@ class SettingsViewController: UITableViewController {
         if(SyncUser.current != nil){
             rows = [
                 ["signoutCell"],
+//                ["removeAdsCell", "forvoCell"],
                 ["infoCell"]
             ]
         }else{
             rows = [
                 ["loginCell", "signupCell"],
+//                ["removeAdsCell", "forvoCell"],
                 ["infoCell"]
             ]
         }
@@ -74,7 +77,8 @@ class SettingsViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if(rows[indexPath.section][indexPath.row] == "signoutCell"){
+        let row = rows[indexPath.section][indexPath.row]
+        if(row == "signoutCell"){
 //            MyRealm.copyFromSyncedRealm()
             SyncUser.current?.logOut()
             rows = [
@@ -83,6 +87,8 @@ class SettingsViewController: UITableViewController {
             ]
             self.tableView.reloadData()
             self.tableView.deselectRow(at: indexPath, animated: true)
+        }else if(row == "removeAdsCell"){
+//            Premium.GetRemoveAds()
         }
     }
     

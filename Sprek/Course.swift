@@ -16,9 +16,9 @@ class Course: Object {
 //  override static func ignoredProperties() -> [String] {
 //    return []
 //  }
-    dynamic var name = ""
-    dynamic var lang = ""
-    dynamic var id = UUID().uuidString
+    @objc dynamic var name = ""
+    @objc dynamic var lang = ""
+    @objc dynamic var id = UUID().uuidString
     override static func primaryKey() -> String? {
         return "id"
     }
@@ -33,13 +33,13 @@ class Course: Object {
         }
     }
     
-    /// Returns the average strength of all units in a course
+    /// Returns the average strength of all cards in a course
     var strength: Int{
         let realm = try! Realm(configuration: MyRealm.config)
-        let units = realm.objects(Unit.self).filter("course == %@", self)
+        let cards = realm.objects(Card.self).filter("unit.course == %@", self)
         var strengths: [Int] = []
-        for unit in units{
-            strengths.append(unit.strength)
+        for card in cards{
+            strengths.append(card.calcStrength)
         }
         return strengths.roundAverage
     }

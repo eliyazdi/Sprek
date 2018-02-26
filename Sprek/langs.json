@@ -304,7 +304,7 @@
     "name" : "Hindi",
     "nativeName" : "हिन्दी, हिंदी"
   },
-  "hk" : {
+  "zh-HK" : {
     "flag" : "HK",
     "name" : "Cantonese",
     "nativeName" : "广东语"
